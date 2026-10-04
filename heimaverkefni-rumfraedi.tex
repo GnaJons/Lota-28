@@ -1,0 +1,239 @@
+% !TeX program = xelatex
+% Sjálfstætt Overleaf-skjal. Veldu XeLaTeX sem þýðanda.
+% Endurgert eftir „Heimadæmi rúmfræði.pdf“.
+% Höfundur frumskjals samkvæmt PDF-lýsigögnum: Helga Snæbjörnsdóttir.
+% Stig á forsíðu; tvö teikniblöð; nemendaleiðbeiningar á bakhlið.
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[left=20mm,right=20mm,top=13mm,bottom=17mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\usepackage{polyglossia}
+\setdefaultlanguage{icelandic}
+\usepackage[table]{xcolor}
+\usepackage{array,tabularx}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usepackage{hyperref}
+
+% ---------- Auðvelt að breyta ----------
+\newcommand{\skiladagur}{10. nóvember}
+\newcommand{\vatnsmerki}{GGJ Hlíðaskóli Gudborg.Gna.Jonsdottir@Reykjavik.is}
+% Merkingin hér að neðan vísar aðeins til LaTeX-uppsetningarinnar.
+% Upprunaleg höfundarmerking er varðveitt í lýsigögnum.
+\newif\ifbirtaVatnsmerki
+\birtaVatnsmerkitrue
+
+\definecolor{titill}{HTML}{444444}
+\definecolor{skilalitur}{HTML}{C00000}
+\definecolor{kvartrabox}{HTML}{FFF2CC}
+\definecolor{stigahaus}{HTML}{E6EEF4}
+
+\hypersetup{
+  unicode=true,
+  pdftitle={Heimadæmi – rúmfræði},
+  pdfauthor={Helga Snæbjörnsdóttir (frumskjal); LaTeX-uppsetning: GGJ Hlíðaskóli Gudborg.Gna.Jonsdottir@Reykjavik.is},
+  pdfsubject={Herbergisteikningar í tvívídd og þrívídd},
+  hidelinks
+}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{5pt}
+\setlength{\arrayrulewidth}{0.45pt}
+\renewcommand{\arraystretch}{1.12}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand{\verkthattur}[1]{\par\vspace{3.5mm}{\bfseries\large #1\par}\vspace{1.5mm}}
+% Einn síðukrókur fyrir alla útgáfuna; engin áhrif á síðuskiptingu.
+\AddToShipoutPictureFG{%
+  \ifbirtaVatnsmerki
+    \AtPageLowerLeft{%
+      \put(0,\LenToUnit{8mm}){%
+        \makebox[\paperwidth]{\fontsize{8}{9}\selectfont\color{black!45}%
+          \vatnsmerki}}}%
+  \fi
+}
+
+\tikzset{
+  netlina/.style={draw=black!65,line width=0.3pt},
+  netrammi/.style={draw=black,line width=1.1pt},
+  kvarði/.style={draw=black,line width=0.5pt,fill=kvartrabox,
+    inner xsep=8pt,inner ysep=6pt,font=\bfseries\normalsize}
+}
+
+% Rúðunet í raunverulegum sentímetrum: breidd, hæð, stærð rúðu.
+\newcommand{\rudunet}[3]{%
+  \draw[netlina,step=#3] (0,0) grid (#1,#2);
+  \draw[netrammi] (0,0) rectangle (#1,#2);
+}
+
+% Jafnhliða þríhyrninganet fyrir þrívíddarteikningar.
+% Bil í hverri röð er 2*d og bil milli raða er sqrt(3)*d.
+% #1 = breidd, #2 = hæð, #3 = d (cm).
+\newcommand{\punktanet}[3]{%
+  \begin{scope}
+    \clip (0,0) rectangle (#1,#2);
+    \pgfmathtruncatemacro{\fjoldaraða}{ceil(#2/(sqrt(3)*#3))}
+    \pgfmathtruncatemacro{\fjoldadalka}{ceil(#1/(2*#3))}
+    \foreach \r in {0,...,\fjoldaraða}{%
+      \foreach \k in {0,...,\fjoldadalka}{%
+        \pgfmathsetmacro{\px}{2*#3*\k+mod(\r,2)*#3}
+        \pgfmathsetmacro{\py}{sqrt(3)*#3*\r}
+        \fill[black!85] (\px,\py) circle[radius=0.72pt];
+      }%
+    }%
+  \end{scope}
+}
+
+\begin{document}
+\raggedright
+
+% ==================== 1. SÍÐA: FORSÍÐA OG STIG ====================
+\hfill\textbf{Nafn:}\enspace\rule{62mm}{0.4pt}
+
+\vspace{5mm}
+\begin{center}
+  {\fontsize{21}{25}\selectfont\bfseries\color{titill} Heimadæmi – rúmfræði\par}
+  \vspace{2mm}
+  {\large\bfseries\color{skilalitur} Skil \skiladagur\par}
+\end{center}
+
+\vspace{2mm}
+{\itshape\textbf{Hæfniviðmið:} Teiknað skýringarmyndir og unnið með teikningar annarra út frá gefnum forsendum, rannsakað, lýst og metið samband milli hlutar og teikningar af honum\par}
+
+\vspace{5mm}
+\textbf{Teiknaðu herbergið þitt á tvo ólíka vegu.} Skilaðu einni mynd í \textbf{tvívídd} á rúðublaðinu og einni mynd í \textbf{þrívídd} á punktablaðinu. Báðar myndirnar eiga að byggjast á mælingum úr herberginu þínu.
+
+\vspace{3mm}
+\textbf{Leiðbeiningar og gátlisti eru á baksíðunni.}
+
+\verkthattur{Stig fyrir verkefnið — alls 25 stig}
+\begingroup
+\fontsize{10.5}{13}\selectfont
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.23}
+\begin{tabularx}{\linewidth}{|Y|C{17mm}|C{18mm}|}
+\hline
+\rowcolor{stigahaus}
+\textbf{Atriði sem er metið} & \textbf{Hámark} & \textbf{Fengin stig} \\
+\hline
+\textbf{1. Mælikvarði skráður.} Mælikvarði er skráður á báðar myndir. Eitt stig fyrir hvora mynd.
+& 2 & \\[2pt]\hline
+\textbf{2. Stærð herbergis í tvívídd.} Lengd og breidd herbergisins fylgja skráðum mælikvarða.
+& 2 & \\[2pt]\hline
+\textbf{3. Stærð húsgagna í tvívídd.} Lengd og breidd helstu húsgagna fylgja mælikvarðanum.
+& 2 & \\[2pt]\hline
+\textbf{4. Tvívíddarteikning.} Herbergið sést ofan frá og hurðir og gluggar eru merktir á réttum stöðum.
+& 2 & \\[2pt]\hline
+\textbf{5. Stærð herbergis í þrívídd.} Lengd, breidd og hæð herbergisins fylgja skráðum mælikvarða.
+& 2 & \\[2pt]\hline
+\textbf{6. Stærð húsgagna í þrívídd.} Lengd, breidd og hæð helstu húsgagna fylgja mælikvarðanum.
+& 2 & \\[2pt]\hline
+\textbf{7. Þrívíddarteikning.} Gólf og tveir samliggjandi veggir sjást. Húsgögn eru sýnd með lengd, breidd og hæð.
+& 2 & \\[2pt]\hline
+\textbf{8. Staðsetning og samræmi.} Báðar myndir sýna sama herbergi og sömu húsgögn á réttum stöðum.
+& 2 & \\[2pt]\hline
+\textbf{9. Merkingar.} Raunveruleg lengd og breidd herbergisins eru merkt með mælieiningum á tvívíddarmyndinni. Helstu húsgögn eru merkt með heitum.
+& 2 & \\[2pt]\hline
+\textbf{10. Frágangur.} Skýrar línur dregnar með reglustiku (1 stig), læsilegar merkingar (1 stig), óþarfar hjálparlínur strokaðar út (1 stig) og snyrtileg, skipulögð heildarmynd (1 stig).
+& 4 & \\[2pt]\hline
+\textbf{11. Frumleiki og útfærsla.} Persónuleg smáatriði úr herberginu (1 stig), eigin útfærsla á húsgögnum og öðrum hlutum (1 stig) og markviss notkun lita, mynsturs eða skyggingar (1 stig).
+& 3 & \\[2pt]\hline
+\rowcolor{stigahaus}\textbf{Samtals} & \textbf{25} & \\[4pt]\hline
+\end{tabularx}
+\endgroup
+
+\vspace{4mm}
+{\small\textbf{Stigagjöf í atriðum 2–9:} 2 stig = atriðið er uppfyllt; 1 stig = atriðið er uppfyllt að hluta; 0 stig = atriðið vantar eða er ekki uppfyllt.}
+
+\vspace{5mm}
+\textbf{Athugasemd:}\par\vspace{4mm}
+\rule{\linewidth}{0.3pt}
+
+\newpage
+% ==================== 2. SÍÐA ====================
+% Netið er 18 x 26 cm. Hver rúða er 1 x 1 cm.
+% Prenta verður í 100% stærð, án „Fit to page“.
+\thispagestyle{empty}\null
+\begin{tikzpicture}[remember picture,overlay]
+  \begin{scope}[shift={(current page.south west)},x=1cm,y=1cm]
+    \begin{scope}[shift={(1.5,2.0)}]
+      \rudunet{18}{26}{1}
+    \end{scope}
+    \node[kvarði,anchor=north east] at (19.2,27.7)
+      {Mælikvarði:\enspace\rule{26mm}{0.4pt}};
+    \node[anchor=north east,font=\normalsize] at (19.5,1.8)
+      {ein rúða = 1 cm\textsuperscript{2}};
+  \end{scope}
+\end{tikzpicture}
+
+\newpage
+% ==================== 3. SÍÐA ====================
+% Punktanetið er hreint vigurgrafíknet, ekki innfelld mynd.
+\thispagestyle{empty}\null
+\begin{tikzpicture}[remember picture,overlay]
+  \begin{scope}[shift={(current page.south west)},x=1cm,y=1cm]
+    \begin{scope}[shift={(1.0,1.8)}]
+      \punktanet{19}{26.8}{0.4}
+    \end{scope}
+    \node[kvarði,anchor=north east] at (19.5,28.4)
+      {Mælikvarði:\enspace\rule{26mm}{0.4pt}};
+  \end{scope}
+\end{tikzpicture}
+
+\newpage
+% ==================== 4. SÍÐA: LEIÐBEININGAR Á BAKHLIÐ ====================
+\begin{center}
+  {\fontsize{20}{24}\selectfont\bfseries\color{titill} Leiðbeiningar fyrir nemendur\par}
+\end{center}
+
+\textbf{Þú átt að skila tveimur teikningum af herberginu þínu:} annarri í tvívídd, séðri ofan frá, og hinni í þrívídd. Notaðu sömu mælingar og sýndu sömu húsgögn á báðum myndum.
+
+\begingroup
+\fontsize{11.5}{14}\selectfont
+\verkthattur{1. Mældu og skráðu}
+Mældu lengd og breidd herbergisins og lengd, breidd og hæð helstu húsgagna. Mældu líka bil frá húsgögnum að veggjum og skoðaðu hvar hurðir og gluggar eru. Skráðu mælingarnar og einfalda skissu á aukablað. Fyrir þrívíddarmyndina þarftu hæð veggjanna; ef þú áætlar hana skaltu merkja hana sem áætlaða.
+
+\verkthattur{2. Veldu mælikvarða}
+Veldu mælikvarða þannig að herbergið komist fyrir á blaðinu. Við \textbf{1\,:\,50} táknar \textbf{1~cm á myndinni 50~cm í raun}. Þá deilirðu mælingum í sentímetrum með 50; 400 cm verða til dæmis 8 cm á myndinni.
+
+\vspace{2mm}
+Skráðu mælikvarðann á \textbf{báðar myndir}. Notaðu hann fyrir allar stærðir á sömu mynd, líka húsgögn, hæðir og bil. Þú mátt velja annan mælikvarða á seinni myndinni ef það hentar betur.
+
+\verkthattur{3. Teiknaðu í tvívídd á rúðublaðið}
+Hugsaðu þér að þú horfir \textbf{beint niður í herbergið}. Teiknaðu fyrst útlínur gólfsins og síðan húsgögnin ofan frá, í réttum stærðum og á réttum stöðum. Merktu hurðir og glugga og skrifaðu heiti helstu húsgagna. Skráðu \textbf{raunverulega lengd og breidd herbergisins með mælieiningum} við réttar hliðar myndarinnar. Hér sýnirðu lengd og breidd, en ekki hæð.
+
+\verkthattur{4. Teiknaðu í þrívídd á punktablaðið}
+Sýndu \textbf{gólf og tvo veggi sem mætast í horni}. Slepptu loftinu og hinum tveimur veggjunum svo sjáist inn í herbergið.
+
+\vspace{2mm}
+Sýndu \textbf{lengd, breidd og hæð} húsgagnanna. Rúm má líta út eins og lágur kassi og skápur eins og hár kassi. Sýndu hurðir og glugga á þeim veggjum sem sjást. Mundu að mælikvarðinn gildir líka um hæðir. Punktarnir hjálpa við stefnu línanna; notaðu reglustiku til að mæla lengdirnar.
+
+\verkthattur{5. Sýndu frumleika og vandaðu frágang}
+Sýndu persónuleg smáatriði úr herberginu og útfærðu húsgögn og aðra hluti með þínum hætti. Notaðu liti, mynstur eða skyggingu til að gera myndirnar skýrari. Haltu stærðum og staðsetningum réttum.
+
+\vspace{2mm}
+Notaðu blýant og reglustiku. Hafðu merkingar læsilegar og heildarmyndina snyrtilega og skipulagða. Strokaðu út óþarfar hjálparlínur. Berðu myndirnar saman, skrifaðu nafnið þitt á forsíðuna og skilaðu fyrir \skiladagur.
+\endgroup
+
+\vspace{3mm}
+\verkthattur{Farðu yfir áður en þú skilar}
+\begingroup
+\fontsize{11.5}{14}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{}cY@{}}
+\(\square\) & Nafnið mitt er á verkefninu og báðar teikningar eru tilbúnar. \\
+\(\square\) & Mælikvarði er skráður og notaður á báðum myndum. \\
+\(\square\) & Tvívíddarmyndin sýnir herbergið ofan frá og þrívíddarmyndin sýnir hæðir. \\
+\(\square\) & Húsgögnin eru í réttum stærðum og á réttum stöðum á báðum myndum. \\
+\(\square\) & Lengd, breidd, mælieiningar og heiti húsgagna eru merkt á tvívíddarmyndina. \\
+\(\square\) & Persónuleg smáatriði og eigin útfærsla sjást á myndunum. \\
+\(\square\) & Línur og merkingar eru skýrar og heildarmyndin snyrtileg. \\
+\end{tabularx}
+\endgroup
+
+\end{document}

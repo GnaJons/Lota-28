@@ -1,0 +1,498 @@
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage[a4paper,margin=0mm]{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+\usepackage[unicode,hidelinks]{hyperref}
+\hypersetup{pdftitle={Rúmfræðiformúlur og talnahús},
+  pdfauthor={GGJ · Hlíðaskóli · Gudborg.Gna.Jonsdottir@Reykjavik.is},
+  pdfsubject={Rúmfræðiformúlur og talnahús fyrir mælieiningar; fyrirmynd bls. 1: Gina Wilson (All Things Algebra), 2015}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% Litirnir eru sóttir úr litamerkingum PDF-frumritsins.
+% Í frumritinu hafa merkingarnar 30% þekju á hvítum grunni.
+\definecolor{rawF}{RGB}{255,237,0}
+\definecolor{rawYF}{RGB}{236,94,193}
+\definecolor{rawR}{RGB}{165,251,112}
+\definecolor{rawM}{RGB}{141,240,253}
+\definecolor{rawG}{RGB}{203,112,6}
+\definecolor{rawU}{RGB}{45,99,245}
+\definecolor{rawl}{RGB}{213,55,216}
+\definecolor{rawb}{RGB}{78,246,197}
+\definecolor{rawh}{RGB}{255,0,0}
+\definecolor{rawr}{RGB}{51,158,0}
+\definecolor{rawth}{RGB}{182,179,141}
+\colorlet{colF}{rawF!30}
+\colorlet{colYF}{rawYF!30}
+\colorlet{colR}{rawR!30}
+\colorlet{colM}{rawM!30}
+\colorlet{colG}{rawG!30}
+\colorlet{colU}{rawU!30}
+\colorlet{coll}{rawl!30}
+\colorlet{colb}{rawb!30}
+\colorlet{colh}{rawh!30}
+\colorlet{colr}{rawr!30}
+\colorlet{colth}{rawth!30}
+
+% Litaður bakgrunnur undir tákni, bæði í formúlu og á mynd.
+\newcommand{\lit}[2]{\begingroup
+  \setlength{\fboxsep}{0.8pt}%
+  \colorbox{#1}{\ensuremath{#2}}\endgroup}
+\newcommand{\cF}{\lit{colF}{F}}
+\newcommand{\cYF}{\lit{colYF}{\mathit{YF}}}
+\newcommand{\cR}{\lit{colR}{R}}
+\newcommand{\cM}{\lit{colM}{M}}
+\newcommand{\cG}{\lit{colG}{G}}
+\newcommand{\cU}{\lit{colU}{U}}
+\newcommand{\cl}[1]{\lit{coll}{#1}}
+\newcommand{\cb}[1]{\lit{colb}{#1}}
+\newcommand{\ch}[1]{\lit{colh}{#1}}
+\newcommand{\radcol}[1]{\lit{colr}{#1}}
+\newcommand{\cth}{\lit{colth}{\text{\th}}}
+
+\tikzset{
+  edge/.style={line width=0.65pt,line join=round},
+  hidden/.style={line width=0.5pt,dash pattern=on 2pt off 1.8pt},
+  height/.style={line width=0.5pt,densely dashed},
+  dim/.style={<->,>=Stealth,line width=0.55pt},
+  lead/.style={->,>=Stealth,line width=0.55pt},
+  label/.style={inner sep=1pt,font=\fontsize{11.5}{13}\selectfont},
+  formula/.style={inner sep=0pt,font=\fontsize{12.3}{14}\selectfont},
+}
+\newcommand{\eqn}[3]{\node[formula] at (#1,#2) {$\displaystyle #3$};}
+\newcommand{\keyrow}[4]{%
+  \fill[#2] (15.72,#1) rectangle (16.48,{#1-0.46});
+  \fill[#2] (16.64,#1) rectangle (19.67,{#1-0.46});
+  \draw[line width=0.4pt] (15.72,#1) rectangle (16.48,{#1-0.46});
+  \draw[line width=0.4pt] (16.64,#1) rectangle (19.67,{#1-0.46});
+  \node[inner sep=0pt,font=\fontsize{10.5}{12}\selectfont] at (16.10,{#1-0.23}) {$#3$};
+  \node[anchor=west,inner sep=0pt,font=\fontsize{10.5}{12}\selectfont] at (16.77,{#1-0.23}) {#4};
+}
+
+% Látlaus höfundarmerking, utan rammans og án áhrifa á uppsetninguna.
+\AddToHook{shipout/foreground}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south,font=\fontsize{8}{9}\selectfont,text=black!40]
+      at ([yshift=2mm]current page.south)
+      {GGJ Hlíðaskóli Gudborg.Gna.Jonsdottir@Reykjavik.is};
+  \end{tikzpicture}}
+
+
+% Sameiginlegur rammi fyrir báðar síðurnar.
+\newcommand{\sidurammi}{
+  \draw[line width=0.7pt] (0.78,-1.45) rectangle (20.22,-28.65);
+  \draw[line width=2.2pt] (0.92,-1.59) rectangle (20.08,-28.51);
+}
+
+% Litir talnahússins, úr Word-frumritinu.
+\definecolor{husHaus}{HTML}{D9D9D9}
+\definecolor{husStor}{HTML}{E5B8B7}
+\definecolor{husStorLjos}{HTML}{F2DBDB}
+\definecolor{husMetri}{HTML}{D6E3BC}
+\definecolor{husMetriLjos}{HTML}{EAF1DD}
+\definecolor{husLitill}{HTML}{8DB3E2}
+\definecolor{husLitillLjos}{HTML}{DBE5F1}
+\definecolor{husFlokkurLitill}{HTML}{C6D9F1}
+\definecolor{husFermetri}{HTML}{FDE9D9}
+\definecolor{husRummetri}{HTML}{DAEEF3}
+\definecolor{husSaeti}{HTML}{E5DFEC}
+\tikzset{
+  husYtri/.style={line width=1.2pt},
+  husAdal/.style={line width=1.0pt},
+  husInnri/.style={line width=0.45pt},
+  husTexti/.style={inner sep=0pt,font=\fontsize{11}{13}\selectfont},
+  husEining/.style={inner sep=0pt,font=\fontsize{11.5}{13}\selectfont},
+  husSmatt/.style={inner sep=0pt,font=\fontsize{9.5}{11}\selectfont}
+}
+
+% Metrar: 13 einingaflokkar, fjórar auðar vinnulínur.
+% Þriggja sæta bil milli Tm/Gm/Mm/km og mm/míkró/nanó/píkó.
+\newcommand{\metrahus}{
+  \begin{scope}[shift={(1.45,-5.12)},y=-1cm]
+  \pgfmathsetmacro{\w}{18.1/13}
+  \def\botn{6.48}
+  \fill[husHaus] (0,0) rectangle (18.1,0.65);
+  \fill[husStorLjos] (0,0.65) rectangle (3*\w,1.35);
+  \fill[husMetriLjos] (3*\w,0.65) rectangle (10*\w,1.35);
+  \fill[husFlokkurLitill] (10*\w,0.65) rectangle (18.1,1.35);
+  \fill[husStor] (0,2.02) rectangle (3*\w,2.72);
+  \fill[husMetri] (3*\w,2.02) rectangle (10*\w,2.72);
+  \fill[husLitill] (10*\w,2.02) rectangle (18.1,2.72);
+  \fill[husStorLjos] (0,5.80) rectangle (3*\w,\botn);
+  \fill[husMetriLjos] (3*\w,5.80) rectangle (10*\w,\botn);
+  \fill[husLitillLjos] (10*\w,5.80) rectangle (18.1,\botn);
+  \node[husTexti,font=\fontsize{14}{16}\selectfont\bfseries] at (9.05,0.325) {Metrar};
+  \node[husTexti] at (1.5*\w,1.0) {Stórar einingar};
+  \node[husTexti] at (6.5*\w,1.0) {Hefðbundnar mælieiningar};
+  \node[husTexti] at (11.5*\w,1.0) {Litlar einingar};
+  \foreach \i/\n/\u/\heiti in {
+    0/12/\mathrm{Tm}/Tera-,
+    1/9/\mathrm{Gm}/Gíga-,
+    2/6/\mathrm{Mm}/Mega-,
+    3/3/\mathrm{km}/Kíló-,
+    4/2/\mathrm{hm}/Hektó-,
+    5/1/\mathrm{dam}/Deka-,
+    6/0/\mathrm{m}/Metri,
+    7/-1/\mathrm{dm}/Desi-,
+    8/-2/\mathrm{cm}/Senti-,
+    9/-3/\mathrm{mm}/Milli-,
+    10/-6/{\mu\mathrm{m}}/Míkró-,
+    11/-9/\mathrm{nm}/Nanó-,
+    12/-12/\mathrm{pm}/Píkó-}{
+      \ifnum\i=6
+        \node[husSmatt] at ({(\i+0.5)*\w},1.685) {$10^0=1$};
+      \else
+        \node[husTexti] at ({(\i+0.5)*\w},1.685) {$10^{\n}$};
+      \fi
+      \node[husEining] at ({(\i+0.5)*\w},2.37) {$\u$};
+      \node[husSmatt,font=\fontsize{10}{12}\selectfont\itshape] at ({(\i+0.5)*\w},6.14) {\heiti};
+  }
+  \foreach \i in {1,...,12}{\draw[husAdal] (\i*\w,1.35)--(\i*\w,\botn);}
+  \foreach \i in {0,1,2,10,11,12}{
+    \foreach \j in {1,2}{
+      \draw[husInnri] ({(\i+\j/3)*\w},2.72)--({(\i+\j/3)*\w},5.80);
+    }
+  }
+  \foreach \yy in {0.65,1.35,2.02,2.72,3.49,4.26,5.03,5.80}{
+    \draw[husAdal] (0,\yy)--(18.1,\yy);
+  }
+  \draw[husAdal] (3*\w,0.65)--(3*\w,1.35) (10*\w,0.65)--(10*\w,1.35);
+  \draw[husYtri] (0,0) rectangle (18.1,\botn);
+  \end{scope}
+}
+
+% #1 = veldi (2 eða 3), #2 = fyrirsögn, #3 = breidd,
+% #4 = vinstri brún, #5 = efri brún, #6 = litur einingaröðar.
+% Hver eining hefur #1 sæti og fjórar vinnulínur.
+\newcommand{\veldisHus}[6]{
+  \begin{scope}[shift={(#4,#5)},y=-1cm]
+  \pgfmathsetmacro{\w}{#3/7}
+  \pgfmathsetmacro{\reitur}{\w/#1}
+  \def\botn{5.69}
+  \fill[husHaus] (0,0) rectangle (#3,0.65);
+  \fill[#6] (0,0.65) rectangle (#3,1.35);
+  \node[husTexti,font=\fontsize{14}{16}\selectfont\bfseries] at (#3/2,0.325) {#2};
+  \foreach \i/\u in {0/km,1/hm,2/dam,3/m,4/dm,5/cm,6/mm}{
+    \fill[husSaeti] ({(\i+1)*\w-\reitur},1.35) rectangle ({(\i+1)*\w},2.05);
+    \node[husEining] at ({(\i+0.5)*\w},1.0) {$\mathrm{\u}^{#1}$};
+    \node[husSmatt,font=\fontsize{10.5}{12}\selectfont] at ({(\i+1)*\w-0.5*\reitur},1.70) {$\mathrm{\u}^{#1}$};
+  }
+  % Lítraröðin er í sömu sætum og í upprunalega skjalinu:
+  % l við dm^3; dl, cl og ml fylla næstu þrjá reiti til hægri.
+  \ifnum#1=3
+    \foreach \j/\u in {14/l,15/dl,16/cl,17/ml}{
+      \fill[husSaeti] (\j*\reitur,3.87) rectangle ({(\j+1)*\reitur},4.78);
+      \node[husEining] at ({(\j+0.5)*\reitur},4.325) {$\mathrm{\u}$};
+    }
+  \fi
+  \foreach \i in {1,...,6}{\draw[husAdal] (\i*\w,0.65)--(\i*\w,\botn);}
+  \pgfmathtruncatemacro{\sidasti}{7*#1-1}
+  \foreach \j in {1,...,\sidasti}{
+    \pgfmathtruncatemacro{\leif}{mod(\j,#1)}
+    \ifnum\leif=0\else
+      \draw[husInnri] (\j*\reitur,1.35)--(\j*\reitur,\botn);
+    \fi
+  }
+  \foreach \yy in {0.65,1.35,2.05,2.96,3.87,4.78}{\draw[husAdal] (0,\yy)--(#3,\yy);}
+  \draw[husYtri] (0,0) rectangle (#3,\botn);
+  \end{scope}
+}
+
+\begin{document}
+\null
+\begin{tikzpicture}[remember picture,overlay,x=1cm,y=1cm]
+\begin{scope}[shift={(current page.north west)}]
+
+\node[anchor=west,inner sep=0pt,font=\fontsize{11}{13}\selectfont]
+  at (0.83,-1.15) {Nafn: \rule{4.7cm}{0.4pt}};
+\sidurammi
+\node[font=\fontsize{26}{29}\selectfont,inner sep=0pt]
+  at (10.5,-2.82) {RÚMFRÆÐIFORMÚLUR};
+
+% ================================================================
+% 1. röð: þríhyrningur, ferningur, rétthyrningur, hringur.
+% ================================================================
+\begin{scope}[shift={(3.35,-5.35)}]
+  \draw[edge] (-1.25,-0.65)--(-0.45,0.75)--(1.28,-0.65)--cycle;
+  \draw[height] (-0.45,0.75)--(-0.45,-0.65);
+  \draw[edge,line width=0.4pt] (-0.45,-0.46)--(-0.26,-0.46)--(-0.26,-0.65);
+  \node[label] at (-0.18,0.05) {$\ch{h}$};
+  \draw[dim] (-1.25,-0.94)--(1.28,-0.94)
+    node[midway,fill=white,inner sep=2pt] {$\cl{l}$};
+\end{scope}
+\eqn{3.35}{-7.63}{\cF=\frac{1}{2}\ch{h}\cl{l}}
+
+\begin{scope}[shift={(8.05,-5.4)}]
+  \draw[edge] (-0.84,-0.84) rectangle (0.84,0.84);
+  \foreach \sx/\sy in {-1/-1,-1/1,1/-1,1/1}{
+    \draw[line width=0.4pt] (\sx*0.65,\sy*0.84)--(\sx*0.65,\sy*0.65)--(\sx*0.84,\sy*0.65);
+  }
+  \draw[dim] (1.10,-0.84)--(1.10,0.84)
+    node[midway,fill=white,inner sep=2pt] {$\ch{h}$};
+  \draw[dim] (-0.84,-1.12)--(0.84,-1.12)
+    node[midway,fill=white,inner sep=2pt] {$\ch{h}$};
+\end{scope}
+\eqn{8.05}{-7.48}{\cU=4\ch{h}}
+\eqn{8.05}{-8.10}{\cF=\ch{h^2}}
+
+\begin{scope}[shift={(12.85,-5.4)}]
+  \draw[edge] (-1.14,-0.66) rectangle (1.14,0.66);
+  \foreach \sx/\sy in {-1/-1,-1/1,1/-1,1/1}{
+    \draw[line width=0.4pt] (\sx*0.94,\sy*0.66)--(\sx*0.94,\sy*0.46)--(\sx*1.14,\sy*0.46);
+  }
+  \draw[dim] (1.4,-0.66)--(1.4,0.66)
+    node[midway,fill=white,inner sep=2pt] {$\cb{b}$};
+  \draw[dim] (-1.14,-0.96)--(1.14,-0.96)
+    node[midway,fill=white,inner sep=2pt] {$\cl{l}$};
+\end{scope}
+\eqn{12.85}{-7.48}{\cU=2\cl{l}+2\cb{b}}
+\eqn{12.85}{-8.10}{\cF=\cl{l}\cb{b}}
+
+\begin{scope}[shift={(17.62,-5.45)}]
+  \draw[edge] (0,0) circle[radius=1.03];
+  \draw[height] (0,-1.03)--(0,1.03);
+  \draw[height] (0,0)--(1.03,0);
+  \node[label] at (-0.34,0) {$\cth$};
+  \node[label] at (0.50,0.29) {$\radcol{r}$};
+\end{scope}
+\eqn{17.62}{-7.45}{\cU=2\pi\radcol{r}}
+\eqn{17.62}{-8.02}{\text{(eða }\cU=\pi\cth\text{)}}
+\eqn{17.62}{-8.61}{\cF=\pi\radcol{r^2}}
+
+% ================================================================
+% 2. röð: samsíðungur, trapisa, rétthyrndur strendingur, strendingur.
+% ================================================================
+\begin{scope}[shift={(3.35,-11.03)}]
+  \draw[edge] (-1.40,-0.68)--(-0.72,0.68)--(1.40,0.68)--(0.72,-0.68)--cycle;
+  \draw[height] (-0.72,0.68)--(-0.72,-0.68);
+  \draw[line width=0.4pt] (-0.72,-0.47)--(-0.51,-0.47)--(-0.51,-0.68);
+  \node[label] at (-0.47,0.0) {$\ch{h}$};
+  \draw[dim] (-0.72,0.93)--(1.4,0.93)
+    node[midway,fill=white,inner sep=2pt] {$\cl{l}$};
+  \draw[dim] (-1.4,-0.96)--(0.72,-0.96)
+    node[midway,fill=white,inner sep=2pt] {$\cl{l}$};
+\end{scope}
+\eqn{3.35}{-13.48}{\cF=\cl{l}\ch{h}}
+
+\begin{scope}[shift={(8.05,-11.03)}]
+  \draw[edge] (-1.30,-0.73)--(-1.02,0.73)--(0.54,0.73)--(1.30,-0.73)--cycle;
+  \draw[height] (-0.78,0.73)--(-0.78,-0.73);
+  \draw[line width=0.4pt] (-0.78,-0.52)--(-0.57,-0.52)--(-0.57,-0.73);
+  \node[label] at (-0.53,0) {$\ch{h}$};
+  \draw[dim] (-1.02,1.0)--(0.54,1.0)
+    node[midway,fill=white,inner sep=2pt] {$\cl{l_1}$};
+  \draw[dim] (-1.3,-1.02)--(1.3,-1.02)
+    node[midway,fill=white,inner sep=2pt] {$\cl{l_2}$};
+\end{scope}
+\eqn{8.05}{-13.48}{\cF=\frac{1}{2}\ch{h}(\cl{l_1}+\cl{l_2})}
+
+\begin{scope}[shift={(12.78,-11.05)}]
+  \coordinate (A) at (-1.20,-0.20);
+  \coordinate (B) at (0.35,-1.10);
+  \coordinate (C) at (1.15,-0.62);
+  \coordinate (D) at (-0.40,0.28);
+  \coordinate (At) at (-1.20,1.05);
+  \coordinate (Bt) at (0.35,0.15);
+  \coordinate (Ct) at (1.15,0.63);
+  \coordinate (Dt) at (-0.40,1.53);
+  \draw[edge] (A)--(B)--(C)--(Ct)--(Dt)--(At)--cycle;
+  \draw[edge] (At)--(Bt)--(Ct) (B)--(Bt);
+  \draw[hidden] (A)--(D)--(C) (D)--(Dt);
+  \draw[dim] ($(A)+(-0.09,-0.25)$)--($(B)+(-0.09,-0.25)$)
+    node[midway,fill=white,inner sep=2pt] {$\cl{l}$};
+  \draw[dim] ($(B)+(0.10,-0.26)$)--($(C)+(0.10,-0.26)$)
+    node[midway,fill=white,inner sep=2pt] {$\cb{b}$};
+  \draw[dim] (1.40,-0.62)--(1.40,0.63)
+    node[midway,fill=white,inner sep=2pt] {$\ch{h}$};
+\end{scope}
+\eqn{12.85}{-13.12}{\cR=\cl{l}\cb{b}\ch{h}}
+\eqn{12.85}{-13.86}{\cYF=2\cl{l}\cb{b}+2\cl{l}\ch{h}+2\cb{b}\ch{h}}
+
+\begin{scope}[shift={(17.48,-10.85)}]
+  \coordinate (A) at (-1.02,-0.46);
+  \coordinate (B) at (1.02,-0.46);
+  \coordinate (C) at (0,-1.17);
+  \coordinate (At) at (-1.02,1.00);
+  \coordinate (Bt) at (1.02,1.00);
+  \coordinate (Ct) at (0,0.29);
+  \fill[colG] (A)--(B)--(C)--cycle;
+  \draw[hidden] (A)--(B);
+  \draw[edge] (A)--(C)--(B)--(Bt)--(At)--cycle;
+  \draw[edge] (At)--(Ct)--(Bt) (Ct)--(C);
+  \draw[dim] (1.28,-0.46)--(1.28,1.0)
+    node[midway,fill=white,inner sep=2pt] {$\ch{h}$};
+  \draw[lead] (-1.04,-1.17)--(-0.26,-0.77);
+  \node[label] at (-1.19,-1.33) {$\cG$};
+\end{scope}
+\eqn{17.62}{-12.93}{\cR=\cG\ch{h}}
+\eqn{17.62}{-13.57}{\cM=\cU\ch{h}}
+\eqn{17.62}{-14.21}{\cYF=\cU\ch{h}+2\cG}
+
+% ================================================================
+% 3. röð: reglulegur píramídi, sívalningur, keila, regla Pýþagórasar.
+% ================================================================
+\begin{scope}[shift={(3.35,-16.96)}]
+  \coordinate (A) at (-1.48,-0.90);
+  \coordinate (B) at (0.62,-0.90);
+  \coordinate (C) at (1.48,-0.10);
+  \coordinate (D) at (-0.62,-0.10);
+  \coordinate (O) at (0,-0.50);
+  \coordinate (T) at (0,1.30);
+  \coordinate (S) at (1.05,-0.50);
+  \fill[colG] (A)--(B)--(C)--(D)--cycle;
+  \draw[edge] (A)--(B)--(C)--(T)--(A) (B)--(T);
+  \draw[hidden] (A)--(D)--(C) (D)--(T);
+  \draw[height] (T)--(O);
+  \draw[height] (T)--(S);
+  \draw[line width=0.4pt] (0,-0.28)--(0.21,-0.28)--(0.21,-0.50);
+  \node[label] at (-0.23,0.41) {$\ch{h}$};
+  \node[label] at (0.65,0.37) {$\cl{l}$};
+  \draw[lead] (-1.21,-1.27)--(-0.72,-0.72);
+  \node[label] at (-1.38,-1.40) {$\cG$};
+\end{scope}
+\eqn{3.35}{-19.05}{\cR=\frac{1}{3}\cG\ch{h}}
+\eqn{3.35}{-19.97}{\cM=\frac{1}{2}\cU\cl{l}}
+\eqn{3.35}{-20.89}{\cYF=\frac{1}{2}\cU\cl{l}+\cG}
+
+\begin{scope}[shift={(8.02,-16.92)}]
+  \draw[edge] (-0.94,0.99)--(-0.94,-1.10);
+  \draw[edge] (0.94,0.99)--(0.94,-1.10);
+  \draw[edge] (0,0.99) ellipse[x radius=0.94,y radius=0.23];
+  \draw[edge] (-0.94,-1.10) arc[start angle=180,end angle=360,x radius=0.94,y radius=0.23];
+  \draw[hidden] (0.94,-1.10) arc[start angle=0,end angle=180,x radius=0.94,y radius=0.23];
+  \fill (0,0.99) circle[radius=1.2pt];
+  \draw[height] (0,0.99)--(0.94,0.99);
+  \node[label] at (0.64,1.47) {$\radcol{r}$};
+  \draw[lead] (0.63,1.30)--(0.49,1.01);
+  \draw[dim] (1.22,-1.10)--(1.22,0.99)
+    node[midway,fill=white,inner sep=2pt] {$\ch{h}$};
+\end{scope}
+\eqn{8.05}{-19.16}{\cR=\pi\radcol{r^2}\ch{h}}
+\eqn{8.05}{-19.94}{\cM=2\pi\radcol{r}\ch{h}}
+\eqn{8.05}{-20.72}{\cYF=2\pi\radcol{r^2}+2\pi\radcol{r}\ch{h}}
+
+\begin{scope}[shift={(12.85,-16.92)}]
+  \coordinate (T) at (0,1.33);
+  \draw[edge] (-1.04,-0.97)--(T)--(1.04,-0.97);
+  \draw[edge] (-1.04,-0.97) arc[start angle=180,end angle=360,x radius=1.04,y radius=0.26];
+  \draw[hidden] (1.04,-0.97) arc[start angle=0,end angle=180,x radius=1.04,y radius=0.26];
+  \draw[height] (T)--(0,-0.97)--(1.04,-0.97);
+  \draw[line width=0.4pt] (0,-0.76)--(0.21,-0.76)--(0.21,-0.97);
+  \fill (0,-0.97) circle[radius=1.15pt];
+  \node[label] at (-0.26,0.03) {$\ch{h}$};
+  \node[label] at (0.79,0.24) {$\cl{l}$};
+  \node[label] at (0.57,-1.12) {$\radcol{r}$};
+\end{scope}
+\eqn{12.85}{-19.05}{\cR=\frac{1}{3}\ch{h}\pi\radcol{r^2}}
+\eqn{12.85}{-19.97}{\cM=\pi\radcol{r}\cl{l}}
+\eqn{12.85}{-20.89}{\cYF=\pi\radcol{r^2}+\pi\radcol{r}\cl{l}}
+
+\node[inner sep=0pt,font=\fontsize{13}{15}\selectfont\bfseries]
+  at (17.62,-15.45) {Regla Pýþagórasar};
+\begin{scope}[shift={(17.58,-16.95)}]
+  \draw[edge,line width=1.0pt,rawh!65!black] (-1.34,-0.75)--(-1.34,0.87);
+  \draw[edge,line width=1.0pt,rawb!45!black] (-1.34,-0.75)--(1.34,-0.75);
+  \draw[edge,line width=1.0pt,rawl!75!black] (-1.34,0.87)--(1.34,-0.75);
+  \draw[line width=0.4pt] (-1.34,-0.51)--(-1.10,-0.51)--(-1.10,-0.75);
+  \node[label] at (-1.60,0.06) {$\lit{colh}{a}$};
+  \node[label] at (0,-1.02) {$\lit{colb}{b}$};
+  \node[label] at (0.06,0.32) {$\lit{coll}{c}$};
+\end{scope}
+\eqn{17.62}{-19.13}{\lit{colh}{a^2}+\lit{colb}{b^2}=\lit{coll}{c^2}}
+
+% ================================================================
+% 4. röð: kúla, hálfkúla (með botni), hringgeiri og táknaskýringar.
+% ================================================================
+\begin{scope}[shift={(3.35,-24.12)}]
+  \draw[edge] (0,0) circle[radius=1.15];
+  \draw[hidden] (0,0) ellipse[x radius=1.15,y radius=0.26];
+  \fill (0,0) circle[radius=1.3pt];
+  \draw[height] (0,0)--(1.15,0);
+  \node[label] at (0.65,0.49) {$\radcol{r}$};
+  \draw[lead] (0.65,0.32)--(0.47,0.03);
+\end{scope}
+\eqn{3.35}{-26.43}{\cR=\frac{4}{3}\pi\radcol{r^3}}
+\eqn{3.35}{-27.30}{\cYF=4\pi\radcol{r^2}}
+
+\begin{scope}[shift={(8.05,-23.67)}]
+  \draw[edge] (-1.16,0) arc[start angle=180,end angle=360,radius=1.16];
+  \draw[edge] (0,0) ellipse[x radius=1.16,y radius=0.26];
+  \fill (0,0) circle[radius=1.3pt];
+  \draw[height] (0,0)--(1.16,0);
+  \node[label] at (0.62,0.60) {$\radcol{r}$};
+  \draw[lead] (0.61,0.41)--(0.56,0.04);
+\end{scope}
+\eqn{8.05}{-26.43}{\cR=\frac{2}{3}\pi\radcol{r^3}}
+\eqn{8.05}{-27.30}{\cYF=3\pi\radcol{r^2}}
+
+\begin{scope}[shift={(12.85,-24.15)}]
+  \fill[colF] (0,0)--(55:1.15) arc[start angle=55,end angle=120,radius=1.15]--cycle;
+  \draw[edge] (0,0) circle[radius=1.15];
+  \draw[edge] (55:1.15)--(0,0)--(120:1.15);
+  \fill (0,0) circle[radius=1.3pt];
+  \draw[line width=0.4pt] (55:0.39) arc[start angle=55,end angle=120,radius=0.39];
+  \node[label] at (0.0,0.61) {$x^\circ$};
+  \node[label] at (0.74,0.45) {$\radcol{r}$};
+  \node[label] at (0.92,1.52) {$\cF$};
+  \draw[lead] (0.79,1.34)--(0.33,0.84);
+\end{scope}
+\eqn{12.85}{-26.63}{\cF=\frac{x\cdot\pi\radcol{r^2}}{360}}
+
+\keyrow{-21.81}{colF}{F}{Flatarmál}
+\keyrow{-22.27}{colYF}{\mathit{YF}}{Yfirborðsflatarmál}
+\keyrow{-22.73}{colR}{R}{Rúmmál}
+\keyrow{-23.19}{colM}{M}{Mötull}
+\keyrow{-23.65}{colG}{G}{Grunnflötur}
+\keyrow{-24.11}{colU}{U}{Ummál}
+\keyrow{-24.57}{coll}{l}{lengd}
+\keyrow{-25.03}{colb}{b}{breidd}
+\keyrow{-25.49}{colh}{h}{hæð}
+\keyrow{-25.95}{colr}{r}{radíus (geisli)}
+\keyrow{-26.41}{colth}{\text{\th}}{þvermál}
+
+% Nákvæmari merking rúmfræðitáknanna; sama merking og í formúlunum.
+\node[anchor=north,align=center,inner sep=0pt,font=\fontsize{7.4}{9}\selectfont,
+  text=black!75] at (17.69,-27.03)
+  {$G$: flatarmál grunnflatar.\\
+   $M$: flatarmál möttuls.\\
+   $U$: ummál grunnflatar í rúmmyndum.};
+
+\node[anchor=north,align=center,inner sep=0pt,font=\fontsize{7.2}{8.5}\selectfont,
+  text=black!75] at (10.5,-27.93)
+  {Strendingar og sívalningur eru réttir; keilan er rétt og píramídinn reglulegur. Hálfkúlan er með botni.};
+
+% Heimildarmerking frumritsins er varðveitt.
+\node[anchor=north,inner sep=0pt,font=\fontsize{7}{8}\selectfont,text=black!65]
+  at (10.5,-28.70) {Fyrirmynd: \textcopyright\ Gina Wilson (All Things Algebra), 2015. Íslensk aðlögun og endurteikning.};
+\end{scope}
+\end{tikzpicture}
+
+
+% ================================================================
+% BLAÐSÍÐA 2 - TALNAHÚS FYRIR MÆLIEININGAR
+% Endurgert úr Talnahús 2026.docx; sömu litir og reitaskipting.
+% ================================================================
+\clearpage
+\null
+\begin{tikzpicture}[remember picture,overlay,x=1cm,y=1cm]
+\begin{scope}[shift={(current page.north west)}]
+\node[anchor=west,inner sep=0pt,font=\fontsize{11}{13}\selectfont]
+  at (0.83,-1.15) {Nafn: \rule{4.7cm}{0.4pt}};
+\sidurammi
+\node[font=\fontsize{26}{29}\selectfont,inner sep=0pt]
+  at (10.5,-2.82) {RÚMFRÆÐI};
+\node[font=\fontsize{19}{22}\selectfont,inner sep=0pt]
+  at (10.5,-3.75) {Talnahús fyrir mælieiningar};
+\metrahus
+\veldisHus{2}{Fermetrar}{16.1}{2.45}{-13.10}{husFermetri}
+\veldisHus{3}{Rúmmetrar}{18.1}{1.45}{-20.40}{husRummetri}
+\end{scope}
+\end{tikzpicture}
+
+\end{document}
