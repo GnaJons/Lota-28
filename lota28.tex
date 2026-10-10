@@ -79,7 +79,7 @@ Hvernig má finna lengd sem ekki er hægt að mæla beint? Hvernig breytist flat
 \hyperref[timi:lota28-02]{2}&\hyperref[timi:lota28-02]{Einslögun og horn.} Hornareglur, samsvörun og rök fyrir einslögun.&\pageref{timi:lota28-02}\\
 \hyperref[timi:lota28-03]{3}&\hyperref[timi:lota28-03]{Einslögun og hlutföll.} Lengdir, flatarmál, prósentur og óbeinar mælingar.&\pageref{timi:lota28-03}\\
 \hyperref[timi:lota28-04]{4}&\hyperref[timi:lota28-04]{Mælikvarði.} Kort, líkön, stækkun, minnkun og flatarmál.&\pageref{timi:lota28-04}\\
-\hyperref[timi:lota28-05]{5}&\hyperref[timi:lota28-05]{Mælikvarðar og vinnuteikningar.} Reitasnið, efnislistar, mismunandi sýnir og grunnteikningar.&\pageref{timi:lota28-05}\\
+\hyperref[timi:lota28-05]{5}&\hyperref[timi:lota28-05]{Mælikvarðar og vinnuteikningar.} Reitasnið, efnislistar, myndir frá ólíkum sjónarhornum og grunnteikningar.&\pageref{timi:lota28-05}\\
 \hyperref[timi:lota28-06]{6}&\hyperref[timi:lota28-06]{Flatarmál, ummál og rúmmál.} Formúlur, samanburður og samsett form.&\pageref{timi:lota28-06}\\
 \hyperref[timi:lota28-07]{7}&\hyperref[timi:lota28-07]{Rúmmál og einingabreytingar.} Rúmeiningar, lítrar og tengsl rúmmáls og massa.&\pageref{timi:lota28-07}\\\bottomrule
 \end{tabularx}
@@ -96,7 +96,7 @@ Hvernig má finna lengd sem ekki er hægt að mæla beint? Hvernig breytist flat
 \textbf{Eftir hornum}&\textbf{Eftir hliðum}\\\midrule
 \hugtak{hvasshyrndur}{Hvasshyrndur}: öll horn minni en \(90^\circ\).&\hugtak{jafnhlida}{Jafnhliða}: allar hliðar jafn langar, öll horn \(60^\circ\).\\
 \hugtak{retthyrndur}{Rétthyrndur}: eitt horn \(90^\circ\).&\hugtak{jafnarma}{Jafnarma}: að minnsta kosti tvær hliðar jafn langar; hornin gegnt þeim jafn stór.\\
-\hugtak{gleidhyrndur}{Gleiðhyrndur}: eitt horn stærra en \(90^\circ\).&Ójafnhliða: engar tvær hliðar jafn langar.\\\bottomrule
+\hugtak{gleidhyrndur}{Gleiðhyrndur}: eitt horn stærra en \(90^\circ\).&Engar hliðar jafn langar.\\\bottomrule
 \end{tabularx}
 \begin{mynd}
 \begin{tikzpicture}[scale=.95]
@@ -120,8 +120,8 @@ Tvö horn þríhyrnings eru \(35^\circ\) og \(35^\circ\). Þriðja hornið er
 
 \framhald{ÓÞEKKT HLIÐ OG PRÓFUN}
 \kafli{Finndu rétta hornið fyrst}
-Í rétthyrndum þríhyrningi er \hugtak{langhlid}{langhliðin} gegnt rétta horninu. Hinar tvær eru \hugtak{skammhlid}{skammhliðar}. Úr fyrri lotu þekkirðu \hugtak{pythagoras}{Pýþagórasarreglu}: ferningur langhliðar er summa ferninga skammhliðanna.
-\begin{regla}\textbf{FLÝTILEIÐ:} Ef \(c\) er langhlið og \(a,b\) skammhliðar, þá
+Í rétthyrndum þríhyrningi er \hugtak{langhlid}{langhliðin} gegnt rétta horninu. Hinar tvær eru \hugtak{skammhlid}{skammhliðar}. Úr fyrri lotu þekkirðu \hugtak{pythagoras}{Pýþagórasarreglu}: lengd langhliðarinnar í öðru veldi er jöfn summu lengda skammhliðanna í öðru veldi.
+\begin{regla}\textbf{FLÝTILEIÐ:} Ef \(c\) er lengd langhliðar og \(a,b\) lengdir skammhliðanna, þá
 \[\begin{aligned}
 &a^2+b^2=c^2\\[5pt]&c=\sqrt{a^2+b^2}\\[5pt]&a=\sqrt{c^2-b^2}.
 \end{aligned}\]
@@ -134,7 +134,7 @@ Skammhliðar eru \(7\cm\) og \(24\cm\). Þá er
 Við leggjum saman \emph{ferningana}; \(7+24\) er ekki lengd þriðju hliðarinnar.
 \end{daemi}
 \begin{daemi}[lotaCyan]{Þegar skammhliðin vantar}
-Í \(\triangle KLM\) er \(\angle L=90^\circ\), \(KM=15\cm\) og \(KL=9\cm\). Hliðin \(KM\) er langhlið því hún snertir ekki oddpunkt rétta hornsins.
+Í \(\triangle KLM\) er \(\angle L=90^\circ\), \(KM=15\cm\) og \(KL=9\cm\). Hliðin \(KM\) er langhlið því hún liggur gegnt rétta horninu.
 \begin{mynd}
 \begin{tikzpicture}[scale=.34]
 \coordinate (K) at (0,0);\coordinate (L) at (5.4,7.2);\coordinate (M) at (15,0);
@@ -163,7 +163,7 @@ Hann er rétthyrndur. Hliðar \(4\), \(6\) og \(8\) cm gefa hins vegar \(16+36=5
 
 \framhald{HRINGUR OG HORNALÍNA}
 \kafli{Hvar leynist rétthyrndur þríhyrningur?}
-\hugtak{hornalina}{Hornalína} rétthyrnings skiptir honum í tvo rétthyrnda þríhyrninga. Ef \(l\) og \(b\) eru lengd og breidd er hornalínan \(d=\sqrt{l^2+b^2}\).
+\hugtak{hornalina}{Hornalína} rétthyrnings skiptir honum í tvo rétthyrnda þríhyrninga. Ef \(l\) og \(b\) eru lengd og breidd er lengd hornalínunnar \(d=\sqrt{l^2+b^2}\).
 
 \kafli{Rétt horn á hringferli}
 Ef \(PQ\) er \hugtak{thvermal}{þvermál} hrings og \(R\) er annar punktur á hringferlinum, þá er \(\angle PRQ=90^\circ\). Þvermálið verður langhlið \(\triangle PQR\).
@@ -179,7 +179,7 @@ Ef \(PQ\) er \hugtak{thvermal}{þvermál} hrings og \(R\) er annar punktur á hr
 \node[maltexti,below=5pt] at (2.5,0){$5$};\node[maltexti,below=5pt] at (7.5,0){$5$};
 \end{tikzpicture}
 \end{mynd}
-\textbf{Hvers vegna?} \(OP=OR=OQ\) eru \hugtak{radius}{radíusar}. Litlu þríhyrningarnir tveir eru því jafnarma. Ef hornin við \(P\) og \(Q\) eru \(u\) og \(v\), er hornið við \(R\) samtals \(u+v\). Hornasumman gefur \(2u+2v=180^\circ\), svo \(u+v=90^\circ\).
+\textbf{Hvers vegna?} Strikin frá miðju hringsins að hornpunktunum eru \hugtak{radius}{radíusar}, svo \(OP=OR=OQ\). Litlu þríhyrningarnir tveir eru því jafnarma. Ef hornin við \(P\) og \(Q\) eru \(u\) og \(v\), er hornið við \(R\) samtals \(u+v\). Hornasumman gefur \(2u+2v=180^\circ\), svo \(u+v=90^\circ\).
 
 \begin{daemi}[lotaMagenta]{Hliðarnar eru gefnar sem hlutfall}
 Lengd rétthyrnings er þreföld breiddin og hornalínan \(\sqrt{90}\metri\). Setjum breiddina \(x\) og lengdina \(3x\):
@@ -190,7 +190,7 @@ Lengdin er \(9\metri\) og \hugtak{flatarmal}{flatarmálið} \(3\cdot9=\bla{27\,\
 \end{daemi}
 
 \framhald{HJÁLPARMYND OG TÚLKUN}
-\kafli{Hæð píramída og hæð hliðaflatar}
+\kafli{Hæð píramída og hæð hliðaflatar (skáhæð)}
 \hugtak{haed}{Hæð} er hornrétt fjarlægð. Lóðrétt hæð píramída er ekki sama lengd og hæð þríhyrningsins á hlið hans. Í reglulegum ferhyrndum píramída er toppurinn beint yfir miðju ferningslaga grunnflatarins. Við táknum lóðréttu hæðina með \(h\) og hæð hliðaflatarins með \(l\).
 \begin{mynd}
 \begin{tikzpicture}[scale=.82]
@@ -235,7 +235,7 @@ Við notum hálfa grunnhliðina, því hæð hliðaflatarins endar í miðju hen
 
 \begin{tabularx}{\linewidth}{l X}
 \toprule Tákn & Hvað merkir það?\\\midrule
-\(\sim\) & \hugtak{einslaga}{Einslaga myndir} hafa sömu lögun. Samsvarandi horn eru jafn stór og hlutfall samsvarandi lengda er fast. Stærðin má vera ólík.\\
+\(\sim\) & \hugtak{einslaga}{Einslaga myndir} hafa sömu lögun. Samsvarandi horn eru jafn stór og hlutfall samsvarandi lengda er fast. Myndirnar mega vera misstórar.\\
 \(\cong\) & \hugtak{aljafn}{Aljafnar myndir} hafa sömu lögun og stærð. Önnur myndin getur legið nákvæmlega ofan á hinni eftir færslu, snúning eða speglun.\\
 \(=\) & \hugtak{jafnadarmerki}{Jafnaðarmerki} segir að gildin séu jöfn. \(AB=DE\) segir að strikin séu jafn löng. \(\angle ABC=\angle DEF\) segir að hornastærðirnar séu jafnar.\\
 \(\approx\) & \hugtak{nalgunarmerki}{Nálgunarmerki} merkir um það bil jafnt og. Það er notað þegar tala hefur til dæmis verið námunduð.\\
@@ -295,7 +295,7 @@ Við notum hálfa grunnhliðina, því hæð hliðaflatarins endar í miðju hen
 \end{mynd}
 \textbf{Af hverju eru topphorn jöfn?} Bæði eru grannhorn sama horns. Ef það horn er \(w\), eru bæði topphornin \(180^\circ-w\).
 
-\begin{regla}\textbf{FLÝTILEIÐ:} Tveir þríhyrningar eru \hugtak{einslaga}{einslaga} ef tvö horn í öðrum eru jafn stór og tvö horn í hinum. Þriðja hornið fylgir sjálfkrafa af hornasummunni. Þetta kallast HH-skilyrði.\end{regla}
+\begin{regla}\textbf{FLÝTILEIÐ:} Tveir þríhyrningar eru \hugtak{einslaga}{einslaga} ef tvö horn í öðrum eru jafn stór og samsvarandi horn í hinum. Þriðja hornið fylgir sjálfkrafa af hornasummunni. Þetta kallast HH-skilyrði.\end{regla}
 \begin{mundu}\textbf{MUNDU:} Eitt sameiginlegt horn nægir ekki til að sýna einslögun. Leitaðu að öðru hornapari og nefndu hvers vegna hornin eru jöfn.\end{mundu}
 
 \framhald{SAMSVÖRUN OG HLUTFÖLL}
@@ -316,7 +316,7 @@ Við notum hálfa grunnhliðina, því hæð hliðaflatarins endar í miðju hen
 \path(R)--node[midway,sloped,above=5pt,maltexti]{$7{,}5$}(Q);
 \end{tikzpicture}
 \end{mynd}
-\begin{daemi}{Mynd snúið og stækkað}
+\begin{daemi}{Snúningur og stækkun myndar}
 Á myndinni passar rétta hornið \(A\) við \(P\), hornið \(B\) við \(Q\) og \(C\) við \(R\). Allar samsvarandi lengdir hafa sama hlutfall:
 \[\begin{aligned}
 &\frac{PQ}{AB}=\frac64=1{,}5\\[5pt]&\frac{PR}{AC}=\frac{4{,}5}{3}=1{,}5\\[5pt]&\frac{QR}{BC}=\frac{7{,}5}{5}=1{,}5.
@@ -324,11 +324,11 @@ Við notum hálfa grunnhliðina, því hæð hliðaflatarins endar í miðju hen
 Talan \(1{,}5\) er \hugtak{staekkunarstudull}{stækkunarstuðullinn} frá minni myndinni til þeirrar stærri.
 \end{daemi}
 \kafli{Hvað segja merkingarnar?}
-Sama bogamerki á hornum merkir að þau séu jafn stór. Sama fjölda strika á hliðum á \emph{sömu mynd} má lesa sem jafnlangar hliðar. Snúningur eða speglun breytir ekki samsvöruninni.
+Sama bogamerki á hornum merkir að þau séu jafn stór. Hliðar með jafnmörgum strikum á \emph{sömu mynd} eru jafn langar. Snúningur eða speglun breytir ekki samsvöruninni.
 
 Táknið \(\sim\) merkir einslaga. Táknið \(\cong\) er notað um \hugtak{aljafn}{aljafnar} myndir: sömu lögun og stærð. Um stakar lengdir eða hornastærðir má nota \(=\).
 
-\begin{mundu}\textbf{ATH.:} Tvær rétthyrndar myndir hafa sömu horn, en geta haft ólíka lögun. Fyrir rétthyrninga þarf líka sama hlutfall lengdar og breiddar. HH-skilyrðið gildir fyrir \emph{þríhyrninga}.\end{mundu}
+\begin{mundu}\textbf{ATH.:} Tveir rétthyrningar hafa jafn stór horn en geta haft ólíka lögun. Fyrir rétthyrninga þarf líka sama hlutfall lengdar og breiddar. HH-skilyrðið gildir fyrir \emph{þríhyrninga}.\end{mundu}
 
 \framhald{EINSLÖGUN Á SAMSETTRI MYND}
 \kafli{Hæð dregin á langhlið}
@@ -363,7 +363,7 @@ Röð bókstafanna heldur saman samsvarandi hornum.
 \end{tikzpicture}
 \end{mynd}
 \begin{daemi}[lotaMagenta]{Finndu litla þríhyrninginn í þeim stóra}
-Hornið við \(A\) er sameiginlegt. Vegna \(DE\parallel BC\) er \(\angle ADE=\angle ABC\). Því er \(\triangle ADE\sim\triangle ABC\). Á mynd með mörgum innri strikum skaltu rekja \emph{þrjár hliðar eins þríhyrnings í einu}, merkja rétt horn og leita að samsíða línum eða sameiginlegu horni. Þannig má einnig finna fleiri einslaga pör í stígandi röð lítilla þríhyrninga.
+Hornið við \(A\) er sameiginlegt. Vegna \(DE\parallel BC\) er \(\angle ADE=\angle ABC\). Því er \(\triangle ADE\sim\triangle ABC\). Á mynd með mörgum innri strikum skaltu rekja \emph{þrjár hliðar eins þríhyrnings í einu}, skoða gefnar hornamerkingar og leita að samsíða línum eða sameiginlegu horni. Sama aðferð nýtist á flóknari myndum með mörgum þríhyrningum.
 \end{daemi}
 \framhald{AÐ LESA MERKINGAR Á MYND}
 \kafli{Sama merking, sama stærð}
@@ -394,7 +394,7 @@ Hliðar með sama fjölda strika eru jafn langar, þótt öðrum þríhyrningnum
 &k=\frac{\text{lengd í nýrri mynd}}{\text{samsvarandi lengd í upphaflegri mynd}}.
 \end{aligned}\]
 Nýja flatarmálið fæst með því að margfalda upphaflega flatarmálið með \(k^2\). Flatarmál fær stuðulinn \(k^2\), því bæði grunnlína og hæð margfaldast með \(k\).\end{regla}
-\begin{daemi}{Grunnlína, hæð og skáhlið}
+\begin{daemi}{Lengdir og flatarmál þríhyrnings}
 Þríhyrningur hefur grunnlínuna \(AB=6\cm\) og hæðina \(CH=4\cm\), þar sem \(AH=2\cm\).
 \begin{mynd}
 \begin{tikzpicture}[scale=.82]
@@ -413,7 +413,7 @@ Flatarmálið er
 \[\begin{aligned}
 &F=\frac{6\cdot4}{2}\\[5pt]&F=12\,\text{cm}^2.
 \end{aligned}\]
- Skáhliðin \(AC\) fæst úr litla rétthyrnda þríhyrningnum:
+ Lengd hliðarinnar \(AC\) fæst úr litla rétthyrnda þríhyrningnum:
 \[\begin{aligned}
 &AC=\sqrt{2^2+4^2}\\[5pt]&AC=\sqrt{20}\\[5pt]&AC=2\sqrt5\cm\approx4{,}47\cm.
 \end{aligned}\]
@@ -427,7 +427,7 @@ Einslaga þríhyrningur með grunnlínu \(9\cm\) hefur stuðulinn
 \end{aligned}\]
 Prófun með nýjum málum: \(\frac{9\cdot6}{2}=27\).
 \end{daemi}
-\begin{mundu}\textbf{MUNDU:} Tvöföld lengd gefur fjórfalt flatarmál. Ef allar lengdir minnka í helming verður flatarmálið fjórðungur, ekki helmingur.\end{mundu}
+\begin{mundu}\textbf{MUNDU:} Þegar allar lengdir tvöfaldast verður flatarmálið fjórfalt. Ef allar lengdir helmingast verður flatarmálið fjórðungur af upphaflega flatarmálinu.\end{mundu}
 
 \framhald{LÍTILL ÞRÍHYRNINGUR Í STÓRUM}
 \begin{mynd}
@@ -467,9 +467,9 @@ Prófun: \(k^2=0{,}36\). Litli þríhyrningurinn þekur \(36\%\) af flatarmáli 
 
 \framhald{BREIDD ÁR ÁN ÞESS AÐ VAÐA}
 \kafli{Teiknaðu mælingarnar í rétta þríhyrninga}
-Í ármælingum er yfirleitt gert ráð fyrir beinum, samsíða bökkum á mælisvæðinu. Sjónlína og hornréttar mælingar mynda einslaga þríhyrninga. Ekki setja heila hlið og hluta hennar í sama hlutverk.
+Í ármælingum er yfirleitt gert ráð fyrir beinum, samsíða bökkum á mælisvæðinu. Sjónlína og hornréttar mælingar mynda einslaga þríhyrninga. Gættu þess að bera saman samsvarandi heilar hliðar þríhyrninganna.
 \begin{daemi}{Tvær grunnlínur sömu megin ár}
-\begin{mynd}\includegraphics[width=.82\linewidth,height=65mm,keepaspectratio]{images/lota28_t3_armaeling.png}\end{mynd}
+\begin{mynd}\includegraphics[width=.70\linewidth,height=55mm,keepaspectratio]{images/lota28_t3_armaeling.png}\end{mynd}
 Litli þríhyrningurinn hefur hæð \(x\) og grunnlínu \(30\metri\). Sá stóri hefur hæð \(x+10\) og grunnlínu \(40\metri\). Þeir hafa sameiginlegt efsta horn og rétt horn við grunnlínurnar.
 \[\begin{aligned}
 &\frac{x}{x+10}=\frac{30}{40}\\[5pt]&40x=30(x+10)\\[5pt]&10x=300\\[5pt]&x=30\metri.
@@ -477,7 +477,7 @@ Litli þríhyrningurinn hefur hæð \(x\) og grunnlínu \(30\metri\). Sá stóri
 Prófun: \(\frac{30}{40}=\frac{30}{30+10}\).
 \end{daemi}
 
-\begin{mundu}\textbf{ATH.:} Ef eina nauðsynlega lengd vantar er ekki hægt að finna ákveðið tölusvar. Kallaðu lengdina \(b\) og skrifaðu sambandið með \(b\), eða aflaðu mælingarinnar. Ekki lesa ómerkta lengd af skissu.\end{mundu}
+\begin{mundu}\textbf{ATH.:} Ef nauðsynlega lengd vantar er ekki hægt að finna ákveðið tölusvar. Kallaðu lengdina \(b\) og skrifaðu sambandið með \(b\), eða aflaðu mælingarinnar. Ekki lesa ómerkta lengd af skissu.\end{mundu}
 
 \timi{4}{MÆLIKVARÐI}
 \markmid{Að finna og nota mælikvarða, samræma einingar og reikna raunverulegar lengdir og flatarmál út frá mynd.}
@@ -489,8 +489,8 @@ Prófun: \(\frac{30}{40}=\frac{30}{30+10}\).
 \end{aligned}\]
 \(1:n\) með \(n>1\) er minnkun; \(n:1\) með \(n>1\) er stækkun.\end{regla}
 \begin{daemi}{Finna mælikvarða líkans}
-Turn í reiknidæmi er \(72\metri\) á hæð og líkan af honum \(4{,}5\cm\).
-\begin{mynd}\includegraphics[width=.82\linewidth,height=65mm,keepaspectratio]{images/lota28_t4_turn_og_likan.png}\end{mynd}
+Turn er \(72\metri\) á hæð og líkan af honum \(4{,}5\cm\).
+\begin{mynd}\includegraphics[width=.70\linewidth,height=55mm,keepaspectratio]{images/lota28_t4_turn_og_likan.png}\end{mynd}
 \[\begin{aligned}
 &72\metri=7200\cm\\[5pt]&4{,}5:7200=1:1600.
 \end{aligned}\]
@@ -536,7 +536,7 @@ Sama svar fæst beint úr hlutfalli: \(\frac{6}{4}\cdot6=9\metri\).
 \end{mynd}
 Myndin er teiknuð \(6\cm\) breið og \(4\cm\) há í PDF-skjalinu. Til að staðfesta þetta með reglustiku þarf að prenta í \textbf{100\% / raunverulegri stærð}.
 \end{daemi}
-\begin{mundu}\textbf{MUNDU:} Stækkun á skjá eða „laga að blaðsíðu“ við prentun breytir mælikvarðanum sem þú mælir. Hlutfall tveggja lengda á sömu óteygðu mynd helst þó óbreytt.\end{mundu}
+\begin{mundu}\textbf{MUNDU:} Stækkun á skjá eða „laga að blaðsíðu“ við prentun breytir mælikvarðanum sem þú mælir. Hlutfall tveggja lengda helst þó óbreytt ef myndin er stækkuð eða minnkuð jafnt í allar áttir.\end{mundu}
 \kafli{Flatarmál fær tvo lengdarstuðla}
 \begin{daemi}[lotaMagenta]{Frá fersentímetrum yfir í ferkílómetra}
 Á korti táknar \(1\cm\) lengdina \(3\,\text{km}\). Einn \(1\cm\times1\cm\) reitur táknar því \(3\,\text{km}\times3\,\text{km}=9\,\text{km}^2\).
@@ -568,13 +568,13 @@ Hálft snið af hlíf er \(7\) reitir á lengd og mest \(3\) reitir á breidd. B
 
 \end{daemi}
 \kafli{Hve marga metra af efni þarf?}
-Leggðu sniðin saman á breidd efnisins og athugaðu hvort þau rúmast. Lengsti hlutinn í uppstillingunni ræður hversu langa efnisræmu þarf. Taktu tillit til saumfara, afskurðar og mynsturstefnu; flatarmálið eitt segir ekki hvort sniðin passa.
+Raðaðu sniðunum á efnið og athugaðu hvort þau rúmast á breidd þess. Uppstillingin ræður hversu langa efnisræmu þarf. Taktu tillit til saumfara, afskurðar og mynsturstefnu; flatarmálið eitt segir ekki hvort sniðin passa.
 
 \framhald{EFNISLISTI ÚR VINNUTEIKNINGU}
 \kafli{Teldu hluti áður en þú leggur saman lengdir}
-\hugtak{efnislisti}{Efnislisti} sýnir tegund efnis, fjölda stykkja, lengd hvers stykkis og heildarlengd. Sami hlutur getur sést í fleiri en einni sýn; teldu hann aðeins einu sinni.
+\hugtak{efnislisti}{Efnislisti} sýnir tegund efnis, fjölda stykkja, lengd hvers stykkis og heildarlengd. Sami hlutur getur sést á fleiri en einni mynd; teldu hann aðeins einu sinni.
 \begin{daemi}{Tveir samliggjandi kassar}
-Í þessu reiknilíkani eru kassarnir samtals \(1{,}8\metri\) breiðir og \(0{,}6\metri\) djúpir. Þeir hafa sameiginlegan millivegg. Á fram- og bakhlið eru fjórar samfelldar raðir af \(1{,}8\metri\) borðum. Á hvorri endahlið og millivegg eru fjórar raðir af \(0{,}6\metri\) borðum. Sex stólpar eru hver \(1{,}1\metri\).
+Í þessu dæmi eru kassarnir samtals \(1{,}8\metri\) breiðir og \(0{,}6\metri\) djúpir. Þeir hafa sameiginlegan millivegg. Bæði á framhlið og bakhlið eru fjórar samfelldar raðir af \(1{,}8\metri\) borðum. Á hvorri endahlið og á milliveggnum eru fjórar raðir af \(0{,}6\metri\) borðum. Sex stólpar eru hver \(1{,}1\metri\).
 \begin{mynd}
 \begin{tikzpicture}[x=3.5cm,y=3.5cm]
 \draw[fill=lotaYellow!18](0,0)rectangle(1.8,.6);\draw(.9,0)--(.9,.6);
@@ -597,8 +597,8 @@ Heildarlengd borða er \(14{,}4+7{,}2=\bla{21{,}6\metri}\). Stólpaefnið er tal
 \kafli{Lesa mál og efnismerkingar}
 Merkingar á borð við \(1\times6\) tommur og \(2\times2\) tommur vísa til nafnmáls þversniðs timburs, ekki lengdar hvers stykkis. Skráðu efnisgerðirnar í aðskildum línum. Ein tomma er \(2{,}54\cm\), en nafnmál og raunmál unnins timburs geta verið ólík.
 
-Ef stólpi nær bæði upp úr og niður í jörð þarf að telja báða hluta. Til dæmis gefa \(0{,}7\metri\) ofanjarðar og \(0{,}4\metri\) neðanjarðar heildarlengdina \(1{,}1\metri\).
-\begin{mundu}\textbf{MUNDU:} Efnislistinn hér er stærðfræðilíkan með tilgreindum samskeytum og stykkjalengdum. Á verkstæði þarf líka að ákveða samskeyti, raunþykkt efnis, skurðtap og kaupstærðir. Ekki mæla skálengdir af þrívíddarskissu eins og þær séu í sama mælikvarða og grunnmynd.\end{mundu}
+Ef stólpi nær bæði upp úr og niður í jörð þarf að leggja saman lengdir beggja hluta. Til dæmis gefa \(0{,}7\metri\) ofanjarðar og \(0{,}4\metri\) neðanjarðar heildarlengdina \(1{,}1\metri\).
+\begin{mundu}\textbf{MUNDU:} Efnislistinn byggist á málunum og fjölda stykkja í dæminu. Við smíði þarf einnig að huga að samskeytum, þykkt efnis, afskurði og þeim lengdum sem efnið fæst í. Ekki mæla skálengdir af þrívíddarskissu eins og þær séu í sama mælikvarða og grunnmynd.\end{mundu}
 
 \framhald{GRUNNMYND, MYND FRAMAN FRÁ OG MYND FRÁ HLIÐ}
 \kafli{Þrjár myndir af sama hlut}
@@ -609,7 +609,7 @@ Við \emph{veljum} eftirfarandi mál fyrir reiknidæmið: lengd \(120\cm\), brei
 \text{Raunlengd (cm)}&120&90&80&110&40&60\\
 \text{Á teikningu (cm)}&6&4{,}5&4&5{,}5&2&3
 \end{array}\]
-Mælitölur við teikninguna segja \emph{raunmálin}, þótt strikin á blaðinu séu minni.
+Tölurnar við teikninguna sýna \emph{raunmálin}, þótt lengdirnar á blaðinu séu styttri.
 \end{daemi}
 \begin{mynd}
 \begin{tikzpicture}[x=1cm,y=1cm,font=\small]
@@ -640,15 +640,15 @@ Mælitölur við teikninguna segja \emph{raunmálin}, þótt strikin á blaðinu
 \end{scope}
 \end{tikzpicture}
 \end{mynd}
-Myndirnar eru í kvarðanum \(1:20\) við prentun í 100\%. Þær sýna ytri mál; veggþykkt er ekki útfærð. Þegar verkefni gefur aðeins hæð dýrs eða notkun húss þarftu sjálf(ur) að velja fleiri mál og skrá þau sem hönnunarforsendur.
+Myndirnar eru í kvarðanum \(1:20\) við prentun í 100\%. Þær sýna ytri mál; veggþykkt er ekki útfærð. Þegar verkefni gefur aðeins hæð dýrs eða notkun húss þarftu að velja önnur mál og taka skýrt fram hvaða mál þú valdir.
 
 \framhald{GRUNNTEIKNING OG GÓLFFLÖTUR}
-\kafli{Greindu einingar og það sem mælistikurnar afmarka}
+\kafli{Athugaðu einingar og línur sem sýna mál}
 Byggingateikningar eru oft málsettar í millímetrum. Talan \(3200\) getur þá táknað \(3200\,\text{mm}=3{,}2\metri\). Athugaðu einingaskýringu; ef hún vantar skaltu rökstyðja túlkun út frá raunhæfri stærð herbergisins og búnaðarins.
 
-Notaðu innanmál herbergisins til að finna gólfflötinn. Áætlaðu grunnflöt búnaðar með einföldum formum og leggðu fletina saman án skörunar. Hlutfall undir búnaði fæst með því að deila þeim fleti með öllum gólffletinum og margfalda með \(100\%\).
+Notaðu innanmál herbergisins til að finna flatarmál gólfsins. Áætlaðu með einföldum formum hve stóran flöt búnaðurinn þekur og leggðu flatarmál þeirra saman án skörunar. Til að fá prósentu deilirðu flatarmáli undir búnaðinum með flatarmáli alls gólfsins og margfaldar með \(100\%\).
 
-\begin{mundu}\textbf{ATH.:} Skoðaðu hvort lengdartölur ná milli innri veggflata eða ytri brúna. Veggþykkt má ekki færast hljóðlega inn í gólfflötinn. Boginn við hurð sýnir opnun hennar; hann er ekki fastur búnaður sem þekur gólfið.\end{mundu}
+\begin{mundu}\textbf{ATH.:} Skoðaðu hvort málin eiga við fjarlægð milli innri veggflata eða ytri brúna. Flatarmál veggjanna á ekki að telja með gólffleti herbergisins. Boginn við hurð sýnir opnun hennar; hann er ekki fastur búnaður sem þekur gólfið.\end{mundu}
 
 \framhald{FRÁ TVÍVÍDD AÐ ÞRÍVÍDD}
 \kafli{Þrjár stefnur á punktablaði}
@@ -679,13 +679,13 @@ Grunnmynd kassans er rétthyrningur, 4 bil á móti 2. Mynd framan frá er 4 bil
 \kafli{Skipuleg vinnuröð}
 \begin{enumerate}
 \item Skráðu raunmálin og hvað er gefið eða valið.
-\item Veldu mælikvarða sem rúmast á blaðinu og reiknaðu teiknilengdir.
-\item Teiknaðu grunnmynd fyrst og láttu staðsetningar hluta passa.
-\item Teiknaðu mynd framan frá og mynd frá hlið með sömu lengdum og hæðum.
-\item Bættu við mælistikum, raunmálum, einingum og mælikvarða.
+\item Veldu mælikvarða þannig að myndin rúmist á blaðinu og reiknaðu lengdirnar á teikningunni.
+\item Teiknaðu grunnmynd fyrst og sýndu innbyrðis staðsetningu hlutanna.
+\item Teiknaðu mynd framan frá og mynd frá hlið þannig að samsvarandi mál passi saman.
+\item Bættu við línum sem sýna mál, raunmálum, einingum og mælikvarða.
 \item Ef þrívíddarmynd fylgir skaltu yfirfæra sömu mál á þrjár stefnur punktanetsins.
 \end{enumerate}
-\begin{mundu}\textbf{MUNDU:} Þrívíddarmynd hjálpar þér að sjá hlutinn fyrir þér. Málsettar grunnmyndir og hliðarmyndir sýna nákvæmar stærðir. Báðar gerðir geta verið gagnlegar í sama verkefni.\end{mundu}
+\begin{mundu}\textbf{MUNDU:} Þrívíddarmynd hjálpar þér að sjá hlutinn fyrir þér. Grunnmynd, mynd framan frá og mynd frá hlið með skráðum málum sýna nákvæmar stærðir. Báðar gerðir geta verið gagnlegar í sama verkefni.\end{mundu}
 
 
 \timi{6}{FLATARMÁL, UMMÁL OG RÚMMÁL}
@@ -701,7 +701,7 @@ Rétthyrningur, hliðar \(l,b\)&\(U=2(l+b)\)&\(F=lb\)\\
 Hringur, radíus \(r\)&\(U=2\pi r\)&\(F=\pi r^2\)
 \end{tabularx}
 Í þríhyrningsformúlunni er \(h\) hornrétt á grunnlínuna \(l\). Í ferningsformúlunum táknar \(h\) hliðarlengd ferningsins.\end{regla}
-\begin{daemi}{Sömu tölur, ólíkar stærðir}
+\begin{daemi}{Sömu hliðarlengdir, ólíkar stærðir}
 Rétthyrningur með hliðar \(7\cm\) og \(3{,}5\cm\) hefur
 
 \[\begin{aligned}
@@ -732,7 +732,7 @@ flatareiningar. Hægra megin er
 \[\begin{aligned}
 &F=\frac{4\cdot3}{2}=6
 \end{aligned}\]
-flatareiningar. Hæðin er alltaf hornrétt fjarlægð frá toppi að línunni sem grunnlínan liggur á, jafnvel þegar hún liggur utan þríhyrningsins.
+flatareiningar. Hæðin er alltaf hornrétt fjarlægð frá hornpunktinum gegnt grunnlínunni að línunni sem hún liggur á, jafnvel þegar hún liggur utan þríhyrningsins.
 
 \end{daemi}
 
@@ -754,7 +754,7 @@ Ferningurinn hefur stærra ummál en hringurinn stærra flatarmál. Á mynd skal
 \end{aligned}\]
 þar sem \(G\) er flatarmál grunnflatar og \(h\) hornrétt hæð. Fyrir rétthyrndan kassa er \(G=l\cdot b\), svo \(R=lbh\).\end{regla}
 \begin{daemi}[lotaCyan]{Þegar flatarmál grunnflatar er þekkt}
-Réttstrendingur hefur grunnflatarflatarmálið \(G=32{,}5\,\text{m}^2\) og hæðina \(h=1{,}2\metri\). Þá er
+Réttstrendingur hefur grunnflöt með flatarmálinu \(G=32{,}5\,\text{m}^2\) og hæðina \(h=1{,}2\metri\). Þá er
 
 \[\begin{aligned}
 &R=32{,}5\cdot1{,}2=39\,\text{m}^3.
@@ -762,13 +762,13 @@ Réttstrendingur hefur grunnflatarflatarmálið \(G=32{,}5\,\text{m}^2\) og hæ�
 Við þurfum ekki hliðarlengdir grunnflatarins ef flatarmál hans er þegar þekkt.
 
 \end{daemi}
-\begin{daemi}[lotaMagenta]{Rúmmál breytt í massa}
-Vagn er \(5\metri\) langur, \(2{,}2\metri\) breiður og fylltur í \(0{,}6\metri\) hæð. Gerum ráð fyrir rétthyrndu rými og að hver rúmmetri af efninu vegi \(1{,}4\) tonn.
-\begin{mynd}\includegraphics[width=.82\linewidth,height=65mm,keepaspectratio]{images/lota28_t6_malarvagn.png}\end{mynd}
+\begin{daemi}[lotaMagenta]{Massi reiknaður út frá rúmmáli}
+Farmrými vagns er \(5\metri\) langt, \(2{,}2\metri\) breitt og fyllt í \(0{,}6\metri\) hæð. Gerum ráð fyrir kassalaga farmrými og að hver rúmmetri af efninu vegi \(1{,}4\) tonn.
+\begin{mynd}\includegraphics[width=.70\linewidth,height=55mm,keepaspectratio]{images/lota28_t6_malarvagn.png}\end{mynd}
 \[\begin{aligned}
 &R=5\cdot2{,}2\cdot0{,}6\\[5pt]&R=6{,}6\,\text{m}^3\\[5pt]&m=6{,}6\cdot1{,}4=9{,}24\text{ tonn}.
 \end{aligned}\]
-Þetta er massi efnisins. Massi vagnsins sjálfs er ekki innifalinn.
+Hér táknar \(m\) massa efnisins í tonnum. Massi vagnsins sjálfs er ekki innifalinn.
 \end{daemi}
 
 \framhald{ÓLÍK MÁL OG SAMSETT FORM}
@@ -834,13 +834,13 @@ Einn desímetri er tíu sentímetrar. Teningur með brún \(1\,\text{dm}\) hefur
 \draw[mal](12.8,10,0)--node[midway,maltexti,right=5pt]{10 cm}(12.8,10,10);
 \end{tikzpicture}
 \end{mynd}
-\begin{regla}\textbf{FLÝTILEIÐ:} Milli samliggjandi eininga hér eru þúsund skref:
+\begin{regla}\textbf{FLÝTILEIÐ:} Í hverju skrefi til hægri margföldum við með þúsund:
 \[\begin{aligned}
 &\text{m}^3 \xrightarrow{ \times1000 } \text{dm}^3
  \xrightarrow{ \times1000 } \text{cm}^3
  \xrightarrow{ \times1000 } \text{mm}^3.
 \end{aligned}\]
-Í hina áttina deilum við með \(1000\) í hverju skrefi. Tvö skref gefa stuðulinn \(1000^2=1\,000\,000\).\end{regla}
+Til vinstri deilum við með \(1000\) í hverju skrefi. Tvö skref gefa stuðulinn \(1000^2=1\,000\,000\).\end{regla}
 \begin{daemi}{Stórar og litlar tölur}
 \[\begin{aligned}
 &2{,}75\,\text{cm}^3=2750\,\text{mm}^3\\[5pt]&46\,\text{cm}^3=0{,}046\,\text{dm}^3\\[5pt]&0{,}12\,\text{dm}^3=120\,\text{cm}^3=120\,000\,\text{mm}^3.
@@ -848,10 +848,10 @@ Einn desímetri er tíu sentímetrar. Teningur með brún \(1\,\text{dm}\) hefur
 Í síðustu línunni er farið tvö einingaskref og því margfaldað með \(1000^2\).
 
 \end{daemi}
-\begin{mundu}\textbf{MUNDU:} Í minni einingu verður talnagildið stærra. \(1\metri=100\cm\), en \(1\,\text{m}^3=100^3\,\text{cm}^3\). Lengdarstuðullinn einn nægir ekki fyrir rúmmál.\end{mundu}
+\begin{mundu}\textbf{MUNDU:} Í minni einingu verður talnagildið stærra. \(1\metri=100\cm\), en \(1\,\text{m}^3=100^3\,\text{cm}^3\). Við breytingu á rúmeiningum notum við lengdarstuðulinn í þriðja veldi.\end{mundu}
 
 \framhald{LÍTRAR OG RÚMEININGAR}
-\begin{mynd}\includegraphics[width=.82\linewidth,height=65mm,keepaspectratio]{images/lota28_t7_litrar_og_rummal.png}\end{mynd}
+\begin{mynd}\includegraphics[width=.70\linewidth,height=55mm,keepaspectratio]{images/lota28_t7_litrar_og_rummal.png}\end{mynd}
 \kafli{Tvö einingakerfi sem tengjast}
 \hugtak{litri}{Lítri} og rúmdesímetri tákna sama rúmmál. \hugtak{millilitri}{Millilítri} og rúmsentímetri gera það líka.
 \begin{regla}\textbf{FLÝTILEIÐ:}
@@ -900,14 +900,14 @@ Talnagildi rúmmáls í ml verður jafnt talnagildi massa í g \emph{með þessa
 \[\begin{aligned}
 &0{,}64\,\text{kg}=640\,\text{g}\longrightarrow640\,\text{ml}.
 \end{aligned}\]
-Prófun í hina áttina: \(640\,\text{ml}=0{,}64\,\text{l}\), sem vegur \(0{,}64\,\text{kg}\) samkvæmt vatnsforsendunni.
+Prófun í hina áttina: \(640\,\text{ml}=0{,}64\,\text{l}\), sem vegur \(0{,}64\,\text{kg}\) samkvæmt forsendunni um massa vatns.
 
 \end{daemi}
-\begin{mundu}\textbf{ATH.:} Ekki nota \(1\,\text{ml}\leftrightarrow1\,\text{g}\) sjálfkrafa fyrir olíu, möl eða önnur efni. Í malardæmi þarf gefinn massa á rúmmetra. Rúmeiningum má hins vegar breyta án þess að vita hvaða efni fyllir rýmið.\end{mundu}
+\begin{mundu}\textbf{ATH.:} Ekki nota \(1\,\text{ml}\leftrightarrow1\,\text{g}\) sjálfkrafa fyrir olíu, möl eða önnur efni. Í dæminu um möl notum við gefinn massa hvers rúmmetra. Breyta má milli rúmeininga án þess að vita hvaða efni fyllir rýmið.\end{mundu}
 \clearpage
 \phantomsection\label{gatlisti}
 \begin{center}{\fontsize{20}{24}\selectfont\bfseries GÁTLISTI LOTU 28}\end{center}
-Merktu við þegar þú getur útskýrt aðferðina og notað hana sjálfstætt. Farðu aftur í viðeigandi tíma ef atriði er óöruggt.
+Merktu við þegar þú getur útskýrt aðferðina og notað hana sjálfstætt. Farðu aftur í viðeigandi tíma ef þú ert óviss um eitthvert atriði.
 \kafli{\hyperref[timi:lota28-01]{1. tími: Þríhyrningar og Pýþagóras}}
 \gat{Ég get flokkað þríhyrning eftir bæði hornum og hliðum.}
 \gat{Ég get fundið langhliðina út frá rétta horninu og reiknað óþekkta hlið.}
@@ -918,7 +918,7 @@ Merktu við þegar þú getur útskýrt aðferðina og notað hana sjálfstætt.
 \gat{Ég get nefnt reglu sem skýrir hvers vegna tvö horn eru jafn stór.}
 \gat{Ég get parað saman horn og hliðar þótt myndum sé snúið eða þær speglaðar.}
 \gat{Ég get sýnt einslögun þríhyrninga með tveimur hornapörum og skrifað bókstafina í réttri röð.}
-\gat{Ég get fundið litla þríhyrninga inni í stærri mynd, greint aljafna frá einslaga myndum og lesið táknin sem bera þær saman.}
+\gat{Ég get fundið litla þríhyrninga inni í stærri mynd, greint hvort myndir séu einslaga, aljafnar eða hvorugt og lesið samanburðartáknin.}
 \kafli{\hyperref[timi:lota28-03]{3. tími: Einslögun og hlutföll}}
 \gat{Ég get fundið lengdarstuðul og notað hann á samsvarandi hliðar og hæðir.}
 \gat{Ég get notað \(k^2\) til að finna flatarmál og reiknað hlutfallið sem prósentu.}
@@ -935,7 +935,7 @@ Merktu við þegar þú getur útskýrt aðferðina og notað hana sjálfstætt.
 \gat{Ég get sýnt hvernig snið rúmast á gefinni efnisbreidd og skráð forsendur um saumför og afskurð.}
 \gat{Ég get gert efnislista með fjölda, stykkjalengd og heildarlengd fyrir hverja efnisgerð.}
 \gat{Ég get teiknað grunnmynd, mynd framan frá og mynd frá hlið í sama kvarða og merkt raunmálin.}
-\gat{Ég get reiknað heildargólfflöt og áætlað hlutfall hans undir búnaði.}
+\gat{Ég get reiknað flatarmál gólfs og áætlað hversu stóran hluta þess búnaður þekur.}
 \gat{Ég get yfirfært mál á þrjár stefnur þrívíddarpunktanets.}
 \kafli{\hyperref[timi:lota28-06]{6. tími: Flatarmál, ummál og rúmmál}}
 \gat{Ég get valið rétta formúlu og einingu fyrir ummál, flatarmál og rúmmál.}
@@ -944,7 +944,7 @@ Merktu við þegar þú getur útskýrt aðferðina og notað hana sjálfstætt.
 \gat{Ég get notað \(R=Gh\), fundið möguleg kassamál og reiknað massa þegar massi á rúmmetra er gefinn.}
 \gat{Ég get fundið rúmmál samsetts forms með samlagningu eða frádrætti án tvítalningar.}
 \kafli{\hyperref[timi:lota28-07]{7. tími: Rúmmál og einingabreytingar}}
-\gat{Ég get útskýrt hvers vegna stuðullinn er 1000 milli samliggjandi rúmeininga.}
+\gat{Ég get útskýrt hvers vegna stuðullinn er 1000 við hvert skref í einingastiganum.}
 \gat{Ég get breytt í báðar áttir milli \(\text{m}^3\), \(\text{dm}^3\), \(\text{cm}^3\) og \(\text{mm}^3\).}
 \gat{Ég get breytt milli l, dl, cl og ml og tengt þær einingar við rúmeiningar.}
 \gat{Ég get fundið massa eða rúmmál vatns með gefinni forsendu og prófað svarið í hina áttina.}
@@ -962,7 +962,7 @@ Smelltu á tilvísun við hugtak til að fara aftur í umfjöllun þess.
 \gloss{jafnarma}{Jafnarma þríhyrningur}{Þríhyrningur með að minnsta kosti tvær jafnlangar hliðar. Hornin gegnt þeim eru jafn stór.}{1}
 \gloss{langhlid}{Langhlið}{Hliðin gegnt rétta horninu í rétthyrndum þríhyrningi. Hún er lengsta hlið hans.}{1}
 \gloss{skammhlid}{Skammhlið}{Önnur tveggja hliða sem mynda rétta hornið í rétthyrndum þríhyrningi.}{1}
-\gloss{pythagoras}{Pýþagórasarregla}{Í rétthyrndum þríhyrningi er \(a^2+b^2=c^2\), þar sem \(c\) er langhliðin og \(a,b\) skammhliðar.}{1}
+\gloss{pythagoras}{Pýþagórasarregla}{Í rétthyrndum þríhyrningi er \(a^2+b^2=c^2\), þar sem \(c\) er lengd langhliðarinnar og \(a,b\) lengdir skammhliðanna.}{1}
 \gloss{hornalina}{Hornalína}{Strik sem tengir tvo hornpunkta marghyrnings sem liggja ekki við sömu hlið. Hornalína rétthyrnings myndar rétthyrndan þríhyrning með tveimur hliðum hans.}{1}
 \gloss{haed}{Hæð}{Hornrétt fjarlægð. Í þríhyrningi er hæðin fjarlægðin frá hornpunkti að línunni sem mótlæg hlið liggur á.}{1}
 \gloss{thvermal}{Þvermál}{Strik milli tveggja punkta á hringferli sem liggur gegnum miðju hrings, eða lengd þess. Lengdin er \(\text{þ}=2r\).}{1}
@@ -973,7 +973,7 @@ Smelltu á tilvísun við hugtak til að fara aftur í umfjöllun þess.
 \gloss{topphorn}{Topphorn}{Gagnstæð horn við skurðpunkt tveggja lína. Armar annars hornsins eru framhald af örmum hins. Topphorn eru jafn stór.}{2}
 \gloss{samsida}{Samsíða línur}{Línur í sama fleti sem skerast ekki. Táknað \(l\parallel m\).}{2}
 \gloss{einslaeg}{Einslæg horn}{Horn í samsvarandi stöðu þar sem lína sker tvær aðrar línur. Þegar þær tvær eru samsíða eru einslægu hornin jafn stór.}{2}
-\gloss{einslaga}{Einslaga myndir}{Myndir með sömu lögun: samsvarandi horn eru jafn stór og hlutfall samsvarandi lengda er fast. Táknið er \(\sim\). Stærðin má vera ólík eða sú sama.}{2}
+\gloss{einslaga}{Einslaga myndir}{Myndir með sömu lögun: samsvarandi horn eru jafn stór og hlutfall samsvarandi lengda er fast. Táknið er \(\sim\). Myndirnar geta verið jafnstórar eða misstórar.}{2}
 \gloss{aljafn}{Aljafnar myndir}{Myndir með sömu lögun og stærð. Samsvarandi hliðar eru jafn langar og horn jafn stór. Táknið er \(\cong\).}{2}
 \gloss{jafnadarmerki}{Jafnaðarmerki}{Táknið \(=\) segir að gildið sé hið sama báðum megin. \(AB=DE\) merkir að lengdir strikanna séu jafnar; \(\angle ABC=\angle DEF\) að hornastærðirnar séu jafnar.}{2}
 \gloss{nalgunarmerki}{Nálgunarmerki}{Táknið \(\approx\) merkir um það bil jafnt og. Til dæmis er \(\sqrt{2}\approx1{,}41\), þar sem svarið er námundað að tveimur aukastöfum.}{2}
@@ -982,8 +982,8 @@ Smelltu á tilvísun við hugtak til að fara aftur í umfjöllun þess.
 \gloss{staekkunarstudull}{Stækkunarstuðull}{Hlutfallið \(k=\frac{\text{ný lengd}}{\text{upphafleg lengd}}\) milli samsvarandi lengda í einslaga myndum. \(k>1\) gefur stækkun, \(0<k<1\) minnkun og \(k=1\) óbreytta stærð.}{3}
 \gloss{maelikvardi}{Mælikvarði}{Hlutfall myndlengdar og raunlengdar í sömu einingu. Í \(1:200\) táknar \(1\cm\) á mynd \(200\cm\) í raun.}{4}
 \kafli{Vinnuteikningar}
-\gloss{vinnuteikning}{Vinnuteikning}{Teikning sem miðlar stærð og gerð hlutar með málum, einingum og viðeigandi sýnum. Mælikvarði skal koma fram þegar teiknað er í kvarða.}{5}
-\gloss{efnislisti}{Efnislisti}{Skrá um efnisgerðir, fjölda stykkja, mál þeirra og heildarmagn sem áætlun byggist á.}{5}
+\gloss{vinnuteikning}{Vinnuteikning}{Teikning sem sýnir stærð og gerð hlutar með málum, einingum og myndum frá viðeigandi sjónarhornum. Mælikvarði skal koma fram þegar teiknað er í kvarða.}{5}
+\gloss{efnislisti}{Efnislisti}{Skrá um efnisgerðir, fjölda stykkja, mál þeirra og heildarmagn efnis sem þarf í verkið.}{5}
 \gloss{grunnmynd}{Grunnmynd}{Sýn ofan frá sem sýnir lengd, breidd og innbyrðis staðsetningu hluta.}{5}
 \gloss{framsyn}{Mynd framan frá}{Sýn beint framan á hlut sem sýnir breidd hans og hæð.}{5}
 \gloss{hlidarsyn}{Mynd frá hlið}{Sýn beint á hlið hlutar sem sýnir dýpt eða lengd hans og hæð.}{5}
@@ -995,7 +995,7 @@ Smelltu á tilvísun við hugtak til að fara aftur í umfjöllun þess.
 \gloss{flatarmal}{Flatarmál}{Stærð flatar. Mælt í ferningseiningum, til dæmis cm\(^2\) eða m\(^2\).}{6}
 \gloss{rummal}{Rúmmál}{Stærð rýmis sem hlutur fyllir eða ílát getur rúmað. Mælt til dæmis í cm\(^3\), dm\(^3\), m\(^3\) eða lítrum.}{6}
 \gloss{radius}{Radíus}{Fjarlægð frá miðju hrings að hringferli, táknuð \(r\). Þvermálið er \(2r\).}{6}
-\gloss{rettstrendingur}{Réttstrendingur}{Strendingur með tvo samsíða, eins grunnfleti þar sem hliðarbrúnir eru hornréttar á grunnfletina. Rúmmál er grunnflatarflatarmál sinnum hæð: \(R=Gh\).}{6}
+\gloss{rettstrendingur}{Réttstrendingur}{Strendingur með tvo samsíða, eins grunnfleti þar sem hliðarbrúnir eru hornréttar á grunnfletina. Rúmmálið fæst með því að margfalda flatarmál grunnflatarins með hæðinni: \(R=Gh\).}{6}
 \gloss{litri}{Lítri}{Rúmmálseining: \(1\,\text{l}=1\,\text{dm}^3=1000\,\text{ml}\). Desílítri er \(0{,}1\,\text{l}\) og sentílítri \(0{,}01\,\text{l}\).}{7}
 \gloss{millilitri}{Millilítri}{Einn þúsundasti úr lítra: \(1\,\text{ml}=0{,}001\,\text{l}=1\,\text{cm}^3\).}{7}
 \gloss{massi}{Massi}{Stærð sem meðal annars er mæld í grömmum, kílógrömmum eða tonnum. Sama rúmmál ólíkra efna getur haft ólíkan massa. \(1\,\text{kg}=1000\,\text{g}\) og \(1\) tonn \(=1000\,\text{kg}\).}{7}
