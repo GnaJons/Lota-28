@@ -1,7 +1,7 @@
 'use strict';
 const variants=[
  {tower:[84,3.5],reduction:[2.5,750000],enlargement:[240,8],image:5,postcard:[54,4.5],house:[7,3.5,6],map:[3600,7.2],journey:[12.5,48000000],area:[3,150]},
- {tower:[96,4.8],reduction:[1.5,600000],enlargement:[420,6],image:6,postcard:[63,7.5],house:[9,4.5,7],map:[2400,6],journey:[8.4,65000000],area:[5,80]},
+ {tower:[96,4.8],reduction:[1.5,525000],enlargement:[390,6],image:6,postcard:[63,7.5],house:[9,4.5,7],map:[2400,6],journey:[8.4,65000000],area:[5,80]},
  {tower:[125,2.5],reduction:[3.5,700000],enlargement:[360,9],image:7,postcard:[48,3.2],house:[6,4,6.5],map:[4500,9],journey:[9.6,55000000],area:[2,225]}
 ];
 const numberTask=(title,intro,board,answer,label,unit,hints,explain,round=false)=>({type:'number',title,intro:intro+(round?' Námundaðu að þremur aukastöfum ef þarf.':''),board,answer:round?rounded(answer):answer,label,unit,hints,explain});

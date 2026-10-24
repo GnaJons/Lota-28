@@ -13,13 +13,13 @@ Gagnvirk æfing unnin eftir verkefnablaðinu „28.5 dæmi(1).pdf“, öllum þr
 | 5 | Breyta millimetrum í metra, finna flatarmál, mælikvarða og hlutfall búnaðar | 28.32 |
 | Valfrjálst | Lengd, dýpt og hæð á þrívíðu punktaneti | Heimaverkefni á bls. 3 |
 
-Svuntumyndin er heilt snið, 9 reitabil á lengd og mest 6 á breidd. Sniðin liggja innan heilla rétthyrninga á efninu; bönd og saumför eru undanskilin. Kassarnir eru tveir aðskildir kassar, hvor með fjórum hliðum og fjórum hornstaurum. Hver hornstaur er aðeins talinn einu sinni. Dyr hundakofans eru miðjaðar og þakmænir liggur eftir dýpt kofans. Í grunnmynd er aðeins útlína gólfsins sýnd. Innanmál baðherbergisins ráða gólfflatarmáli og búnaðarsvæðin skarast ekki.
+Svuntumyndin er heilt snið, 9 reitabil á lengd og mest 6 á breidd. Sniðin liggja innan heilla rétthyrninga á efninu; bönd og saumför eru undanskilin. Kassarnir í vefæfingunni eru þrír aðskildir kassar, hver með fjórum hliðum og fjórum hornstaurum. Hver hornstaur er aðeins talinn einu sinni. Dyr hundakofans eru miðjaðar og þakmænir liggur eftir dýpt kofans. Í grunnmynd er aðeins útlína gólfsins sýnd. Innanmál baðherbergisins ráða gólfflatarmáli og búnaðarsvæðin skarast ekki.
 
 ## Uppbygging og aðgengi
 
 Fimm meginhlutar innihalda 17 skref. Valfrjáls aukaæfing hefur þrjú skref. Nemandi fær endurgjöf og stigvaxandi vísbendingar, getur farið til baka eða valið kafla úr yfirliti og æft aftur með nýjum tölum. Myndaval er aðgengilegt með lyklaborði og myndum fylgja textalýsingar. Tugabrot má rita með kommu eða punkti.
 
-Framvinda geymist aðeins í localStorage undir lyklinum `ggj-lota28-timi05-aefing-v1`. Svör eru ekki send til kennara. Ógild vistun er endurstillt og æfingin virkar einnig þegar vafrinn bannar vistun.
+Framvinda geymist aðeins í localStorage undir lyklinum `ggj-lota28-timi05-aefing-v2`. Svör eru ekki send til kennara. Ógild vistun er endurstillt og æfingin virkar einnig þegar vafrinn bannar vistun.
 
 Æfingin er felld inn í `#timi-5` með panel `#aefing-timi-5`. Hún opnast sjálfkrafa með beinum tengli, hleðst annars þegar panelinn er opnaður, lagar hæð sína að efninu og er falin í prentun.
 
@@ -32,3 +32,5 @@ Framvinda geymist aðeins í localStorage undir lyklinum `ggj-lota28-timi05-aefi
 - Innfelling í réttan kafla, sjálfvirk hæð og felun í prentun voru staðfest.
 
 GGJ Hlíðaskóli
+
+Yfirferð 24. október 2026: þremur kössum fylgja 12 hornstaurar; fjalafjöldi og efnislengdir hafa verið endurreiknuð í öllum þremur afbrigðum. Framhlið hundakofans hefur ný mál í þriðja afbrigði. Sjá [nákvæma breytingaskrá](../YFIRFERD-2026-10-24.md).

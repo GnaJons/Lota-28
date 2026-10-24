@@ -1,6 +1,6 @@
 'use strict';
 const $=id=>document.getElementById(id);
-const KEY='ggj-lota28-timi02-aefing-v1';
+const KEY='ggj-lota28-timi02-aefing-v2';
 const CORE_COUNT=buildSections(0).filter(s=>!s.optional).length;
 const freshPhase=()=>({choice:null,answer:'',verified:false,hints:0,attempts:0,feedback:false});
 const cleanState=(seed=0)=>({version:1,seed,index:0,steps:buildSections(seed).map(section=>({phase:0,phases:section.tasks.map(freshPhase)}))});

@@ -28,9 +28,9 @@ function boxesFigure(v){
  let s=`<rect x="${x-10}" y="${ground}" width="${W+20}" height="${H*.2}" fill="#e7eee3"/>`+rect(x,y,5*k,H,'#e9e0cd')+rect(x+W-5*k,y,5*k,H,'#e9e0cd');
  for(let r=0;r<rows;r++)s+=rect(x,y+r*(boardH+gap),W,boardH,'#f7ecd9');
  s+=dim(x,x+W,y+H+19,fmt(b)+' cm')+line([x+W+20,y],[x+W+20,y+H],'dimension')+label([x+W+56,y+H/2],fmt(p)+' cm','ruler-label')+label([x+W/2,327],'Ein hlið','diagram-note');
- for(let j=0;j<2;j++){let bx=370,by=56+j*133;s+=rect(bx,by,85,85,'#eff5f8');for(const [dx,dy]of [[0,0],[85,0],[0,85],[85,85]])s+=`<circle cx="${bx+dx}" cy="${by+dy}" r="4.5" fill="#ac572e"/>`;s+=label([bx+42.5,by+43],String(j+1),'figure-label')}
+ for(let j=0;j<3;j++){let bx=380,by=35+j*95;s+=rect(bx,by,68,68,'#eff5f8');for(const [dx,dy]of [[0,0],[68,0],[0,68],[68,68]])s+=`<circle cx="${bx+dx}" cy="${by+dy}" r="4.5" fill="#ac572e"/>`;s+=label([bx+34,by+34],String(j+1),'figure-label')}
  s+=label([414,327],'Ofan frá','diagram-note');
- return svg(s,`Tveir aðskildir kassar án botns og loks. Hver hefur 4 hliðar og 4 staura. Á hverri hlið eru ${rows} timburfjalir, hver ${b} cm löng. Hver staur er ${p} cm langur. Rauðir punktar sýna fjóra staura á hvorum kassa.`);
+ return svg(s,`Þrír aðskildir kassar án botns og loks. Hver hefur 4 hliðar og 4 staura. Á hverri hlið eru ${rows} timburfjalir, hver ${b} cm löng. Hver staur er ${p} cm langur. Rauðir punktar sýna fjóra staura á hverjum kassa.`);
 }
 function viewDrawing(v,type,wrong=false,compact=false){
  const [w,d,wall,h,dw,dh,n]=v.dog,k=Math.min(270/Math.max(w,d),205/h,205/d),cx=260,bottom=252;

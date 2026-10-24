@@ -21,9 +21,11 @@ skjábreytingar. Turnar, póstkort og kortalína eru merkt sem skýringarmyndir.
 
 Mælikvarðinn er alltaf mynd : raun. Stórar tölur mega innihalda bil.
 Komma og punktur samþykkt sem tugabrotsmerki; þrír aukastafir þar sem þess þarf.
-Geymslulykill: `ggj-lota28-timi04-aefing-v1`. Engin nöfn eða svör send frá tækinu.
+Geymslulykill: `ggj-lota28-timi04-aefing-v2`. Engin nöfn eða svör send frá tækinu.
 
 Staðfest 24. október 2026: 60 sjálfstæð svarpróf og 60 svarskref í vafra;
 60 skjápróf við 360 px breidd, rétt/rangt svar, myndaval með mús og lyklaborði,
 vísbendingar, áfram/aftur, yfirlit, endurhleðsla, ný talnaafbrigði, óaðgengileg og
 spillt vafrageymsla, innfelling, hæð ramma og að reitur sé falinn í prentun.
+
+Yfirferð 24. október 2026: í öðru talnaafbrigði eru kvarðarnir nú 1,5 : 525.000 og 390 : 6, svo einfölduðu kvarðarnir endurtaka ekki kvarðana á verkefnablaðinu. Sjá [nákvæma breytingaskrá](../YFIRFERD-2026-10-24.md).
