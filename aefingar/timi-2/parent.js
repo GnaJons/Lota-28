@@ -13,7 +13,9 @@
     panel.addEventListener('toggle', load);
     window.addEventListener('hashchange', fromLink);
     window.addEventListener('message', event => {
-      if (event.origin !== location.origin || event.source !== frame.contentWindow) return;
+      const childUrl = new URL(frame.src || frame.dataset.src, document.baseURI);
+    const expectedOrigin = childUrl.protocol === 'file:' ? 'null' : childUrl.origin;
+    if (event.origin !== expectedOrigin || event.source !== frame.contentWindow) return;
       if (event.data?.type !== 'ggj-exercise-height' || !Number.isFinite(event.data.height)) return;
       frame.style.height = Math.max(400, Math.min(6000, Math.ceil(event.data.height))) + 'px';
     });
