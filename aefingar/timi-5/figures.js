@@ -30,7 +30,7 @@ function boxesFigure(v){
  s+=dim(x,x+W,y+H+19,fmt(b)+' cm')+line([x+W+20,y],[x+W+20,y+H],'dimension')+label([x+W+56,y+H/2],fmt(p)+' cm','ruler-label')+label([x+W/2,327],'Ein hlið','diagram-note');
  for(let j=0;j<2;j++){let bx=370,by=56+j*133;s+=rect(bx,by,85,85,'#eff5f8');for(const [dx,dy]of [[0,0],[85,0],[0,85],[85,85]])s+=`<circle cx="${bx+dx}" cy="${by+dy}" r="4.5" fill="#ac572e"/>`;s+=label([bx+42.5,by+43],String(j+1),'figure-label')}
  s+=label([414,327],'Ofan frá','diagram-note');
- return svg(s,`Tveir aðskildir kassar án botns og loks. Hver hefur 4 hliðar og 4 staura. Á hverri hlið eru ${rows} borð, hvert ${b} cm langt. Hver staur er ${p} cm langur. Rauðir punktar sýna fjóra staura á hvorum kassa.`);
+ return svg(s,`Tveir aðskildir kassar án botns og loks. Hver hefur 4 hliðar og 4 staura. Á hverri hlið eru ${rows} timburfjalir, hver ${b} cm löng. Hver staur er ${p} cm langur. Rauðir punktar sýna fjóra staura á hvorum kassa.`);
 }
 function viewDrawing(v,type,wrong=false,compact=false){
  const [w,d,wall,h,dw,dh,n]=v.dog,k=Math.min(270/Math.max(w,d),205/h,205/d),cx=260,bottom=252;

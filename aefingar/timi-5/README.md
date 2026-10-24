@@ -8,7 +8,7 @@ Gagnvirk æfing unnin eftir verkefnablaðinu „28.5 dæmi(1).pdf“, öllum þr
 | --- | --- | --- |
 | 1 | Lesa heilt svuntusnið á reitum; fullorðins- og barnastærð | 28.29 a–b |
 | 2 | Raða sniðum á efnisrúllu, finna lengd efnis og lengja snið | 28.29 c–d |
-| 3 | Telja borð og staura og reikna heildarlengd efnis | 28.30 |
+| 3 | Telja timburfjalir og staura og reikna heildarlengd efnis | 28.30 |
 | 4 | Greina grunnmynd, framhlið og hliðarmynd; nota mælikvarða | 28.31 |
 | 5 | Breyta millimetrum í metra, finna flatarmál, mælikvarða og hlutfall búnaðar | 28.32 |
 | Valfrjálst | Lengd, dýpt og hæð á þrívíðu punktaneti | Heimaverkefni á bls. 3 |
